@@ -52,18 +52,22 @@ Project SML
 
 ## Domain Projek: Sumber Daya Manusia
 <a id="domain-projek"></a>
-cldjnehbejhw
+Attrition karyawan merujuk pada keluarnya karyawan dari suatu organisasi akibat pengunduran diri, pensiun, atau pemecatan. Meskipun sebagian pengurangan karyawan tidak dapat dihindari, tingkat pergantian karyawan yang berlebihan dapat mengganggu operasional bisnis secara signifikan, menghambat pertumbuhan, dan berdampak pada kesuksesan jangka panjang. Pengurangan karyawan telah menjadi salah satu masalah paling mendesak bagi organisasi modern, terutama di industri yang kompetitif di mana mempertahankan talenta terbaik sangat penting untuk mempertahankan keunggulan kompetitif. [1](https://www.questjournals.org/jrhss/papers/vol13-issue3/1303122126.pdf)
+
+Faktor penyebab utama keputusan karyawan untuk mengundurkan diri meliputi ketidakpuasan terhadap kompensasi, tingginya tingkat stres kerja, terbatasnya peluang pengembangan karier, serta manajemen yang kurang efektif. Selain itu, budaya kerja yang tidak mendukung dan kurangnya pengakuan atas kontribusi karyawan turut memperparah tingkat attrition. Oleh karena itu, perusahaan perlu menerapkan strategi retensi holistik yang mencakup peningkatan kesejahteraan karyawan, pengembangan kepemimpinan, serta program pengembangan karier yang terstruktur agar dapat mempertahankan tenaga kerja yang berkualitas dan mendukung keberlanjutan bisnisnya secara efektif. [1](https://www.questjournals.org/jrhss/papers/vol13-issue3/1303122126.pdf)
+
+Proyek ini berada dalam domain analisis karakteristik karyawan dan manajemen risiko keuangan, dengan fokus pada pengembangan model prediksi berbasis data untuk mengidentifikasi karyawan yang berpotensi mengundurkan diri dari perusahaan. Dengan memanfaatkan teknik data science dan machine learning, bank dapat memprediksi employee attrition secara lebih akurat dan melakukan intervensi yang bersifat proaktif untuk mempertahankan karyawan dan meminimalisir kerugian finansial yang mungkin timbul.
 
 ### Referensi
 <a id="referensi"></a>
-Isi konten referensi di sini...
+[1] Kaushik, R. D. & Dubey, N. (2025). _Study Employee Attrition and Its Footprint on Organization Performance_. Quest Journals Journal of Research in Humanities and Social Science, 13(3), 122-126. https://doi.org/10.35629/9467-1303122126
 
 ## Business Understanding
 <a id="business-understanding"></a>
 
 ### Problem Statements
 <a id="problem-statements"></a>
-Perusahaan mengalami tantangan dalam mempertahankan talenta berharga akibat tingginya angka employee attrition yang tidak terprediksi, mengakibatkan kerugian finansial yang signifikan dan gangguan operasional, sementara faktor-faktor penyebab utama keputusan karyawan untuk mengundurkan diri belum sepenuhnya dipahami.
+Karyawan dinilai menjadi aset perusahaan karena kemampuan, pengetahuan, dan keterampilan mereka sangat penting untuk menggerakkan dan mengembangkan perusahaan. Namun, perusahaan mengalami tantangan dalam mempertahankan talenta berharga karyawan. Tingginya angka employee attrition tidak hanya berdampak pada kerugian finansial dan gangguan operasional, tetapi juga meningkatkan beban biaya perekrutan karyawan baru.
 
 Berdasarkan hal tersebut, berikut adalah pernyataan masalah yang diangkat:
 - **Pernyataan Masalah 1** : Bagaimana mengidentifikasi faktor-faktor penting yang memengaruhi keputusan karyawan untuk keluar dari perusahaan?
