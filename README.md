@@ -110,7 +110,7 @@ Dengan implementasi solusi ini, manfaat utama yang diharapkan antara lain:
 <a id="sumber-data"></a>
 Dataset yang digunakan dalam proyek ini diperoleh dari situs [Kaggle](https://www.kaggle.com/competitions/tugas-1-sml-a-2025/data). Dataset ini mencakup informasi tentang 1.173 karyawan, yang mencatat berbagai aspek demografis dan profil karakteristik karyawan.
 
-Dataset ini memiliki 34 fitur, yang mencakup .............. dan lainnya. Di antara seluruh karyawan, hanya sekitar 16,07% yang termasuk dalam kategori churn (berhenti menggunakan layanan). Ketidakseimbangan kelas ini menjadikan proses pelatihan model prediktif sebagai tantangan tersendiri.
+Dataset ini memiliki 34 fitur, yang mencakup usia, gaji harian, departemen, pendidikan, level jabatan, dan lainnya. Di antara seluruh karyawan, hanya sekitar 16,15% yang termasuk dalam kategori attrition (keluar dari perusahaan). Ketidakseimbangan kelas ini menjadikan proses pelatihan model prediktif sebagai tantangan tersendiri.
 
 ### Deskripsi Fitur
 <a id="deskripsi-fitur"></a>
