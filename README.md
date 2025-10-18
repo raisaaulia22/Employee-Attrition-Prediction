@@ -3,7 +3,7 @@ Project SML
 
 # Daftar Isi
 
-- [Domain Projek: Keuangan](#domain-projek-keuangan)
+- [Domain Projek: Sumber Daya Manusia](#domain-projek)
   - [Referensi](#referensi)
 - [Business Understanding](#business-understanding)
   - [Problem Statements](#problem-statements)
@@ -50,8 +50,9 @@ Project SML
 
 
 
-## Domain Projek: Keuangan
-<a id="domain-projek-keuangan"></a>
+## Domain Projek: Sumber Daya Manusia
+<a id="domain-projek"></a>
+cldjnehbejhw
 
 ### Referensi
 <a id="referensi"></a>
@@ -62,7 +63,12 @@ Isi konten referensi di sini...
 
 ### Problem Statements
 <a id="problem-statements"></a>
-Isi problem statements di sini...
+Perusahaan mengalami tantangan dalam mempertahankan talenta berharga akibat tingginya angka employee attrition yang tidak terprediksi, mengakibatkan kerugian finansial yang signifikan dan gangguan operasional, sementara faktor-faktor penyebab utama keputusan karyawan untuk mengundurkan diri belum sepenuhnya dipahami.
+
+Berdasarkan hal tersebut, berikut adalah pernyataan masalah yang diangkat:
+- Pernyataan Masalah 1 : Bagaimana mengidentifikasi faktor-faktor penting yang memengaruhi keputusan karyawan untuk keluar dari perusahaan?
+- Pernyataan Masalah 2 : Bagaimana membangun model prediksi yang mampu memperkirakan kemungkinan seorang karyawan akan keluar dari perusahaan dengan tingkat akurasi tinggi?
+- Pernyataan Masalah 3 : Bagaimana menyusun strategi berbasis data untuk menurunkan angka attrition berdasarkan profil dan karakteristik karyawan berisiko tinggi?
 
 ### Goals
 <a id="goals"></a>
