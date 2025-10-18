@@ -66,28 +66,51 @@ Isi konten referensi di sini...
 Perusahaan mengalami tantangan dalam mempertahankan talenta berharga akibat tingginya angka employee attrition yang tidak terprediksi, mengakibatkan kerugian finansial yang signifikan dan gangguan operasional, sementara faktor-faktor penyebab utama keputusan karyawan untuk mengundurkan diri belum sepenuhnya dipahami.
 
 Berdasarkan hal tersebut, berikut adalah pernyataan masalah yang diangkat:
-- Pernyataan Masalah 1 : Bagaimana mengidentifikasi faktor-faktor penting yang memengaruhi keputusan karyawan untuk keluar dari perusahaan?
-- Pernyataan Masalah 2 : Bagaimana membangun model prediksi yang mampu memperkirakan kemungkinan seorang karyawan akan keluar dari perusahaan dengan tingkat akurasi tinggi?
-- Pernyataan Masalah 3 : Bagaimana menyusun strategi berbasis data untuk menurunkan angka attrition berdasarkan profil dan karakteristik karyawan berisiko tinggi?
+- **Pernyataan Masalah 1** : Bagaimana mengidentifikasi faktor-faktor penting yang memengaruhi keputusan karyawan untuk keluar dari perusahaan?
+- **Pernyataan Masalah 2** : Bagaimana membangun model prediksi yang mampu memperkirakan kemungkinan seorang karyawan akan keluar dari perusahaan dengan tingkat akurasi tinggi?
+- **Pernyataan Masalah 3** : Bagaimana menyusun strategi berbasis data untuk menurunkan angka attrition berdasarkan profil dan karakteristik karyawan berisiko tinggi?
 
 ### Goals
 <a id="goals"></a>
-Isi goals di sini...
+Untuk menjawab pernyataan masalah di atas, tujuan proyek ini dirumuskan sebagai berikut :
+- **Tujuan 1** : Melakukan eksplorasi dan analisis data karyawan untuk mengidentifikasi pola dan fitur yang memengaruhi angka attrition karyawan.
+- **Tujuan 2** : Membangun model prediktif berbasis machine learning yang mampu menghitung probabilitas attrition dari masing-masing karyawan.
+- **Tujuan 3** : Memberikan rekomendasi dan rencana aksi yang berbasis pada hasil prediksi model untuk menurunkan angka attrition karyawan.
 
 ### Solution Statements
 <a id="solution-statements"></a>
-Isi solution statements di sini...
+Untuk mencapai tujuan-tujuan tersebut, solusi yang akan diimplementasikan meliputi:
+- **Eksperimen Berbagai Algoritma Klasifikasi :**
+  Membangun dan membandingkan performa beberapa algoritma seperti :
+  -  A
+  -  B
+  -  C
+- **Optimasi Model dengan Hyperparameter Tuning :**
+  Menggunakan pendekatan seperti Bayesian Optimization dengan optuna untuk mendapatkan   konfigurasi model terbaik.
+- **Evaluasi Model dengan Metrik yang Relevan :**
+  Menggunakan metrik seperti :
+  - Accuracy untuk mengukur prediksi keseluruhan
+  - Precision, Recall, F1-Score untuk menilai performa pada kelas attrition
+  - ROC-AUC untuk mengevaluasi kemampuan model dalam membedakan kelas
+  - Confusion Matrix untuk melihat distribusi hasil prediksi
+- **Analisis Fitur dan Visualisasi :**
+  Menyajikan visualisasi seperti feature importance dan correlation heatmap untuk menginterpretasikan fitur-fitur utama yang berkontribusi terhadap attrition.
 
 ### Project Benefits
 <a id="project-benefits"></a>
-Isi project benefits di sini...
+Dengan implementasi solusi ini, manfaat utama yang diharapkan antara lain:
+- **Pengurangan Biaya Operasional :** Mengurangi biaya rekrutmen dan training melalui pencegahan dini karyawan berisiko keluar.
+- **Peningkatan Produktivitas :** Mempertahankan talenta kunci dan mengurangi gangguan kerja akibat pergantian karyawan, meningkatkan stabilitas tim dan kontinuitas operasional bisnis.
+- **Data-Driven Decision Making :** Memberikan insights berbasis data untuk pengambilan keputusan strategis departemen HR dalam merancang program retensi yang lebih efektif dan terukur.
 
 ## Data Understanding
 <a id="data-understanding"></a>
 
 ### Sumber Data
 <a id="sumber-data"></a>
-Isi sumber data di sini...
+Dataset yang digunakan dalam proyek ini diperoleh dari situs [Kaggle](https://www.kaggle.com/competitions/tugas-1-sml-a-2025/data). Dataset ini mencakup informasi tentang 1.173 karyawan, yang mencatat berbagai aspek demografis dan profil karakteristik karyawan.
+
+Dataset ini memiliki 34 fitur, yang mencakup .............. dan lainnya. Di antara seluruh karyawan, hanya sekitar 16,07% yang termasuk dalam kategori churn (berhenti menggunakan layanan). Ketidakseimbangan kelas ini menjadikan proses pelatihan model prediktif sebagai tantangan tersendiri.
 
 ### Deskripsi Fitur
 <a id="deskripsi-fitur"></a>
