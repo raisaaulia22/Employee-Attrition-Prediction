@@ -37,7 +37,7 @@ Project SML
     - [Plot PR-AUC Curve](#plot-pr-auc-curve)
 - [Save Best Model](#save-best-model)
 - [Model Interpretation](#model-interpretation)
-  - [Interpretation with SHAP Values](#interpretation-with-shap-values)
+  - [Interpretation](#interpretation)
   - [Feature Importance](#feature-importance)
 - [Financial Result](#financial-result)
 - [Conclusions](#conclusions)
@@ -178,9 +178,9 @@ Konten save best model...
 ## Model Interpretation
 <a id="model-interpretation"></a>
 
-### Interpretation with SHAP Values
-<a id="interpretation-with-shap-values"></a>
-Konten interpretation with SHAP values...
+### Interpretation
+<a id="interpretation"></a>
+Konten interpretation...
 
 ### Feature Importance
 <a id="feature-importance"></a>
