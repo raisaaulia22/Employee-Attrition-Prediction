@@ -46,3 +46,83 @@ Project SML
  - Langkah Selanjutnya
 
 ## Domain Proyek : Keuangan
+
+# Daftar Isi
+
+- [Domain Projek: Keuangan](#domain-projek-keuangan)
+  - [Referensi](#referensi)
+- [Business Understanding](#business-understanding)
+  - [Problem Statements](#problem-statements)
+  - [Goals](#goals)
+  - [Solution Statements](#solution-statements)
+  - [Project Benefits](#project-benefits)
+- [Data Understanding](#data-understanding)
+  - [Sumber Data](#sumber-data)
+  - [Deskripsi Fitur](#deskripsi-fitur)
+  - [Penjelasan Kontekstual Fitur](#penjelasan-kontekstual-fitur)
+  - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+    - [Missing Value & Outliers](#missing-value--outliers)
+    - [Univariate Analysis](#univariate-analysis)
+    - [Multivariate Analysis](#multivariate-analysis)
+    - [Kesimpulan EDA](#kesimpulan-eda)
+
+
+## Domain Projek: Keuangan
+<a id="domain-projek-keuangan"></a>
+
+### Referensi
+<a id="referensi"></a>
+Isi konten referensi di sini...
+
+## Business Understanding
+<a id="business-understanding"></a>
+
+### Problem Statements
+<a id="problem-statements"></a>
+Isi problem statements di sini...
+
+### Goals
+<a id="goals"></a>
+Isi goals di sini...
+
+### Solution Statements
+<a id="solution-statements"></a>
+Isi solution statements di sini...
+
+### Project Benefits
+<a id="project-benefits"></a>
+Isi project benefits di sini...
+
+## Data Understanding
+<a id="data-understanding"></a>
+
+### Sumber Data
+<a id="sumber-data"></a>
+Isi sumber data di sini...
+
+### Deskripsi Fitur
+<a id="deskripsi-fitur"></a>
+Isi deskripsi fitur di sini...
+
+### Penjelasan Kontekstual Fitur
+<a id="penjelasan-kontekstual-fitur"></a>
+Isi penjelasan kontekstual di sini...
+
+## Exploratory Data Analysis (EDA)
+<a id="exploratory-data-analysis-eda"></a>
+
+### Missing Value & Outliers
+<a id="missing-value--outliers"></a>
+Isi analisis missing value & outliers di sini...
+
+### Univariate Analysis
+<a id="univariate-analysis"></a>
+Isi univariate analysis di sini...
+
+### Multivariate Analysis
+<a id="multivariate-analysis"></a>
+Isi multivariate analysis di sini...
+
+### Kesimpulan EDA
+<a id="kesimpulan-eda"></a>
+Isi kesimpulan EDA di sini...
