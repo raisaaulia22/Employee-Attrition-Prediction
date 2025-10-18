@@ -1,52 +1,6 @@
 # Employee-Attrition-Prediction
 Project SML
 
-## Daftar Isi
-- Domain Proyek
- -  Referensi
-- Business Understanding
- - Problem Statements
- - Goals
- - Solution Statements
- - Project Benefits
-- Data Understanding
- - Sumber Data
- - Deskripsi Fitur
- - Penjelasan Kontekstual Fitur
- - Exploratory Data Analysis (EDA)
-  - Missing Value & Outliers
-  - Univariate Analysis
-  - Multivariate Analysis
-  - Kesimpulan EDA
-- Data Preparation
- - Label Encoding dengan Mapping pada Fitur Target
- - Feature Engineering, Data Cleaning, and Prepocessing
-- Model Training, Comparison, Selection, and Tuning
- - Model Selection
- - Feature Selection
- - Hyperparameter Tuning
-- Model Testing and Evaluation
- - Data Test Predict
- - Best Data Evaluation
-  - Classification Report
-  - Metode Evaluasi Lanjutan
-  - Confusion Matrix
-  - Plot ROC-AUC Curve
-  - Plot PR-AUC Curve
-- Save Best Model
-- Model Interpretation
- - Interpretation
- - Feature Importance
-- Financial Result
-- Conclusion
- - Ringkasan Proyek
- - Hasil dan Evaluasi Model
- - Interpretasi dan Validasi Model
- - Estimasi Nilai Finansial
- - Langkah Selanjutnya
-
-## Domain Proyek : Keuangan
-
 # Daftar Isi
 
 - [Domain Projek: Keuangan](#domain-projek-keuangan)
@@ -65,6 +19,35 @@ Project SML
     - [Univariate Analysis](#univariate-analysis)
     - [Multivariate Analysis](#multivariate-analysis)
     - [Kesimpulan EDA](#kesimpulan-eda)
+- [Data Preparation](#data-preparation)
+  - [Label Encoding dengan Mapping pada Fitur Target](#label-encoding-dengan-mapping-pada-fitur-target)
+  - [Splitting Dataset](#splitting-dataset)
+  - [Feature Engineering, Data Cleaning and Preprocessing](#feature-engineering-data-cleaning-and-preprocessing)
+- [Model Training, Comparison, Selection and Tuning](#model-training-comparison-selection-and-tuning)
+  - [Model Selection](#model-selection)
+  - [Feature Selection](#feature-selection)
+  - [Hyperparameter Tuning](#hyperparameter-tuning)
+- [Model Testing and Evaluation](#model-testing-and-evaluation)
+  - [Data Test Predict](#data-test-predict)
+  - [Best Model Evaluation](#best-model-evaluation)
+    - [Classification Report](#classification-report)
+    - [Metode Evaluasi Lanjutan](#metode-evaluasi-lanjutan)
+    - [Confusion Matrix](#confusion-matrix)
+    - [Plot ROC-AUC Curve](#plot-roc-auc-curve)
+    - [Plot PR-AUC Curve](#plot-pr-auc-curve)
+- [Save Best Model](#save-best-model)
+- [Model Interpretation](#model-interpretation)
+  - [Interpretation with SHAP Values](#interpretation-with-shap-values)
+  - [Feature Importance](#feature-importance)
+- [Financial Result](#financial-result)
+- [Conclusions](#conclusions)
+  - [Ringkasan Proyek](#ringkasan-proyek)
+  - [Hasil dan Evaluasi Model](#hasil-dan-evaluasi-model)
+  - [Penanganan Ketidakseimbangan Data](#penanganan-ketidakseimbangan-data)
+  - [Interpretasi dan Validasi Model](#interpretasi-dan-validasi-model)
+  - [Estimasi Nilai Finansial](#estimasi-nilai-finansial)
+  - [Langkah Selanjutnya](#langkah-selanjutnya)
+
 
 
 ## Domain Projek: Keuangan
@@ -126,3 +109,110 @@ Isi multivariate analysis di sini...
 ### Kesimpulan EDA
 <a id="kesimpulan-eda"></a>
 Isi kesimpulan EDA di sini...
+
+
+## Data Preparation
+<a id="data-preparation"></a>
+
+### Label Encoding dengan Mapping pada Fitur Target
+<a id="label-encoding-dengan-mapping-pada-fitur-target"></a>
+Konten label encoding...
+
+### Splitting Dataset
+<a id="splitting-dataset"></a>
+Konten splitting dataset...
+
+### Feature Engineering, Data Cleaning and Preprocessing
+<a id="feature-engineering-data-cleaning-and-preprocessing"></a>
+Konten feature engineering...
+
+## Model Training, Comparison, Selection and Tuning
+<a id="model-training-comparison-selection-and-tuning"></a>
+
+### Model Selection
+<a id="model-selection"></a>
+Konten model selection...
+
+### Feature Selection
+<a id="feature-selection"></a>
+Konten feature selection...
+
+### Hyperparameter Tuning
+<a id="hyperparameter-tuning"></a>
+Konten hyperparameter tuning...
+
+## Model Testing and Evaluation
+<a id="model-testing-and-evaluation"></a>
+
+### Data Test Predict
+<a id="data-test-predict"></a>
+Konten data test predict...
+
+### Best Model Evaluation
+<a id="best-model-evaluation"></a>
+
+#### Classification Report
+<a id="classification-report"></a>
+Konten classification report...
+
+#### Metode Evaluasi Lanjutan
+<a id="metode-evaluasi-lanjutan"></a>
+Konten metode evaluasi lanjutan...
+
+#### Confusion Matrix
+<a id="confusion-matrix"></a>
+Konten confusion matrix...
+
+#### Plot ROC-AUC Curve
+<a id="plot-roc-auc-curve"></a>
+Konten plot ROC-AUC curve...
+
+#### Plot PR-AUC Curve
+<a id="plot-pr-auc-curve"></a>
+Konten plot PR-AUC curve...
+
+## Save Best Model
+<a id="save-best-model"></a>
+Konten save best model...
+
+## Model Interpretation
+<a id="model-interpretation"></a>
+
+### Interpretation with SHAP Values
+<a id="interpretation-with-shap-values"></a>
+Konten interpretation with SHAP values...
+
+### Feature Importance
+<a id="feature-importance"></a>
+Konten feature importance...
+
+## Financial Result
+<a id="financial-result"></a>
+Konten financial result...
+
+## Conclusions
+<a id="conclusions"></a>
+
+### Ringkasan Proyek
+<a id="ringkasan-proyek"></a>
+Konten ringkasan proyek...
+
+### Hasil dan Evaluasi Model
+<a id="hasil-dan-evaluasi-model"></a>
+Konten hasil dan evaluasi model...
+
+### Penanganan Ketidakseimbangan Data
+<a id="penanganan-ketidakseimbangan-data"></a>
+Konten penanganan ketidakseimbangan data...
+
+### Interpretasi dan Validasi Model
+<a id="interpretasi-dan-validasi-model"></a>
+Konten interpretasi dan validasi model...
+
+### Estimasi Nilai Finansial
+<a id="estimasi-nilai-finansial"></a>
+Konten estimasi nilai finansial...
+
+### Langkah Selanjutnya
+<a id="langkah-selanjutnya"></a>
+Konten langkah selanjutnya...
