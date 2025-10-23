@@ -557,7 +557,28 @@ Sample salah satu karyawan
 
 ## Financial Result
 <a id="financial-result"></a>
-Konten financial result...
+**Estimasi Dampak Finansial Model Attrition terhadap Perusahaan**
+
+Untuk menunjukkan nilai tambah dari analisis ini, akan disajikan performa model dalam bentuk estimasi keuntungan finansial bagi perusahaan. Analisis ini didasarkan pada confusion matrix dan data yang tersedia saat ini.
+
+**Asumsi Dasar:** Karena tidak tersedia data spesifik mengenai biaya attrition aktual, digunakan asumsi berdasarkan penelitian industri bahwa biaya mengganti karyawan berkisar antara 1.5x hingga 2x gaji tahunan. Digunakan asumsi konservatif sebesar 1.5x gaji tahunan.
+
+**Komponen Biaya dan Manfaat yang Diperhitungkan:**
+- **Biaya Retensi untuk False Positive (FP):**
+Karyawan yang salah diprediksi akan attrit namun sebenarnya bertahan. Perusahaan akan mengeluarkan biaya retensi yang tidak perlu.
+Asumsi: Perusahaan memberikan program retensi berupa bonus, training, atau promosi dengan biaya sebesar 30% dari gaji bulanan.
+- **Kehilangan Pendapatan dari False Negative (FN):**
+Karyawan yang benar-benar attrit namun gagal terdeteksi oleh model. Perusahaan menanggung seluruh biaya attrition sebesar 1.5x gaji tahunan.
+- **Penghematan Biaya dari True Positive (TP):**
+Karyawan yang diprediksi attrit dan berhasil dipertahankan. Perusahaan menghemat biaya attrition sebesar 1.5x gaji tahunan, dikurangi biaya retensi sebesar 30% dari gaji bulanan.
+
+**Langkah Selanjutnya:** Dilakukan perhitungan proyeksi keuntungan/kerugian berdasarkan nilai-nilai di atas menggunakan dataset aktual untuk hasil finansial, dengan mempertimbangkan jumlah karyawan pada setiap kategori confusion matrix (TP, FP, FN) dan gaji tahunan mereka.
+
+Model menghasilkan estimasi hasil finansial sekitar [MASUKKAN ANGGKA DI SINI]. Jumlah sebenarnya akan bergantung pada kebijakan manajemen perusahaan saat mengimplementasikan strategi retensi untuk karyawan berdasarkan probabilitas attrition yang diprediksi.
+
+Sebagai contoh, jika perusahaan ingin bersikap lebih konservatif dengan mengurangi pengeluaran yang terkait dengan false positive, perusahaan dapat menargetkan karyawan dengan probabilitas attrition yang lebih tinggi, sehingga memengaruhi potensi keuntungan.
+
+Namun demikian, untuk tujuan estimasi dan sebagai dasar pengambilan keputusan, kita telah memastikan bahwa proyek ini sangat layak untuk dilakukan.
 
 ## Conclusions
 <a id="conclusions"></a>
