@@ -220,11 +220,13 @@ Setiap kelompok fitur saling berinteraksi dalam mempengaruhi keputusan karyawan 
 | YearsSinceLastPromotion | 1,176.00 | 2.1828 | 3.2153 | 0.0000 | 0.0000 | 1.0000 | 3.0000 | 15.0000 |
 | YearsWithCurrManager | 1,176.00 | 4.1964 | 3.5648 | 0.0000 | 2.0000 | 3.0000 | 7.0000 | 17.0000 |
 | Attrition | 1,176.00 | 0.1616 | 0.3682 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.0000 |
+
+
 Berdasarkan hasil statistik deskriptif yang diperoleh, dataset ini merepresentasikan profil 1.176 karyawan dengan karakteristik yang beragam. Rata-rata usia karyawan adalah 37 tahun dengan masa kerja di perusahaan sekitar 7 tahun. Sebagian besar karyawan memiliki pengalaman kerja total 11 tahun dan telah menempati posisi saat ini selama 4 tahun. Dari aspek kompensasi, gaji bulanan rata-rata sebesar $6,544 dengan variasi yang cukup signifikan antar level jabatan.
 
 Tingkat kepuasan karyawan secara umum berada pada level sedang hingga baik, dengan nilai rata-rata sekitar 2.7 dari skala 4 untuk berbagai aspek kepuasan kerja. Meskipun sebagian besar karyaman menunjukkan keterlibatan kerja yang baik, terdapat sekitar 16% karyawan yang mengalami attrition atau keluar dari perusahaan. Pola kerja menunjukkan bahwa karyawan rata-rata mengikuti 2-3 kali pelatihan dalam setahun terakhir dan memiliki kenaikan gaji tahunan sebesar 15%. Temuan ini mengindikasikan adanya variasi dalam pengalaman dan persepsi karyawan yang dapat dijadikan dasar untuk menganalisis faktor-faktor yang mempengaruhi turnover dalam perusahaan.
 
-Rata-rata Fitur Kategori Churn 
+
 ## Rata-rata Fitur per Kategori Attrition
 
 |                          | 0         | 1         |
@@ -256,6 +258,8 @@ Rata-rata Fitur Kategori Churn
 | YearsSinceLastPromotion  | 2.24      | 1.87      |
 | YearsWithCurrManager     | 4.46      | 2.83      |
 | Attrition                | 0.00      | 1.00      |
+
+
 Berdasarkan hasil analisis rata-rata fitur per kategori attrition, terlihat pola yang jelas antara karyawan yang bertahan (0) dan yang keluar (1). Karyawan yang mengalami attrition cenderung lebih muda dengan rata-rata usia 33 tahun dibandingkan yang bertahan (38 tahun). Mereka juga memiliki tingkat kepuasan kerja yang lebih rendah across semua aspek - lingkungan kerja, pekerjaan, dan hubungan kerja. Dari sisi karir, karyawan yang keluar memiliki level jabatan yang lebih rendah, penghasilan bulanan yang lebih kecil ($4,844 vs $6,872), dan masa kerja yang lebih singkat di perusahaan (4.9 tahun vs 7.5 tahun).
 
 Pola menarik terlihat dalam mobilitas kerja dimana karyawan yang attrition justru memiliki jarak tempuh ke kantor yang lebih jauh (11 km vs 9 km) dan pernah bekerja di lebih banyak perusahaan sebelumnya (2.97 vs 2.64). Meskipun mendapat kenaikan gaji yang hampir sama, mereka memiliki tingkat kepemilikan saham perusahaan yang lebih rendah dan lebih jarang mengikuti pelatihan. Temuan ini mengindikasikan bahwa karyawan yang keluar cenderung berada pada fase karir awal, kurang terikat secara finansial dengan perusahaan, dan mengalami tingkat engagement yang lebih rendah dalam berbagai aspek pekerjaan.
