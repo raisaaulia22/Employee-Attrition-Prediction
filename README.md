@@ -360,11 +360,94 @@ Meskipun ditemukan sejumlah outlier, data tersebut tidak dihapus dari dataset un
 
 ### Univariate Analysis
 <a id="univariate-analysis"></a>
-Isi univariate analysis di sini...
+Grafik 1 : Distribusi kategori Churn Karyawan
+<img width="794" height="702" alt="image" src="https://github.com/user-attachments/assets/48fd42ce-fdff-4d22-810a-7d904019509c" />
+Berdasarkan distribusi kategori attrition pada data training, teridentifikasi bahwa **16.2%** karyawan termasuk dalam kategori churn (keluar dari perusahaan), sementara **83.8%** karyawan bertahan. Proporsi ini mengindikasikan bahwa sebagian besar karyawan dalam dataset tetap berada di perusahaan, dengan hanya sekitar 1 dari 6 karyawan yang memutuskan untuk keluar. Tingkat attrition sebesar 16.2% ini memberikan baseline penting untuk pengembangan model prediktif dalam mengidentifikasi faktor-faktor yang memengaruhi keputusan karyawan untuk meninggalkan perusahaan.
+Grafik 2 : Distribusi Fitur Numerik
+<img width="1988" height="3065" alt="image" src="https://github.com/user-attachments/assets/4901b65f-1d03-47a7-816a-de1f9f04cbd5" />
+Visualisasi distribusi seluruh variabel numerik memberikan gambaran menyeluruh mengenai bentuk sebaran data, kecenderungan pusat, serta potensi skewness (kemencengan) dari masing-masing variabel. Secara umum, sebagian besar variabel menunjukkan distribusi yang tidak normal (non-simetris) dengan kecenderungan right-skewed (miring ke kanan), terutama pada variabel yang berhubungan dengan masa kerja dan pendapatan.
+
+Beberapa temuan penting dari distribusi tersebut adalah sebagai berikut:
+
+Variabel dengan Distribusi Relatif Simetris
+Beberapa variabel seperti Age, DailyRate, HourlyRate, dan MonthlyRate menunjukkan distribusi yang relatif menyebar merata di sekitar nilai rata-rata. Hal ini menandakan tidak adanya dominasi nilai ekstrem tertentu, serta menggambarkan keragaman yang cukup seimbang antar individu dalam hal usia dan kompensasi harian/jam.
+
+Variabel yang Miring ke Kanan (Right-Skewed)
+Variabel seperti DistanceFromHome, MonthlyIncome, TotalWorkingYears, YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion, dan YearsWithCurrManager memiliki ekor panjang di sisi kanan. Ini menunjukkan sebagian besar karyawan memiliki nilai rendah–sedang (misalnya masa kerja atau pendapatan yang lebih pendek/rendah), sementara hanya sedikit yang memiliki nilai tinggi (masa kerja atau pendapatan jauh di atas rata-rata).
+Pola ini umum dijumpai dalam konteks ketenagakerjaan, di mana hanya sebagian kecil karyawan yang berpengalaman lama atau memiliki jabatan tinggi.
+
+Variabel Kategorikal Bertipe Skala Ordinal (Diskret 1–4 atau 1–5)
+Variabel seperti Education, EnvironmentSatisfaction, JobInvolvement, JobSatisfaction, RelationshipSatisfaction, WorkLifeBalance, dan PerformanceRating cenderung menunjukkan distribusi dengan puncak-puncak tertentu pada nilai diskritnya. Hal ini menunjukkan bahwa sebagian besar responden memberi penilaian pada tingkat menengah (skor 2 atau 3), dengan sedikit responden di ekstrem (skor 1 atau 4). Distribusi seperti ini menggambarkan penilaian karyawan yang cenderung moderat terhadap aspek-aspek pekerjaan.
+
+Variabel dengan Distribusi Acak atau Merata
+Variabel seperti EmployeeNumber dan MonthlyRate menunjukkan pola yang tampak acak atau merata tanpa kecenderungan bentuk distribusi tertentu, yang dapat disebabkan karena variabel tersebut bersifat identifikasi unik atau bergantung pada sistem penggajian yang bervariasi.
+
+Grafik 3: Distribusi Fitur Kategorik
+<img width="1980" height="1535" alt="image" src="https://github.com/user-attachments/assets/6e9346fd-d0c9-4e97-a21e-e3b8c9635ba4" />
+Visualisasi distribusi variabel kategorik memberikan gambaran mengenai proporsi dan dominasi tiap kategori dalam dataset karyawan. Secara umum, sebagian besar variabel menunjukkan ketimpangan distribusi antar kategori, yang mencerminkan karakteristik umum tenaga kerja dalam perusahaan.
+
+1. BusinessTravel
+
+Mayoritas karyawan (70,4%) hanya melakukan perjalanan bisnis Travel_Rarely, sementara hanya sebagian kecil yang Travel_Frequently (19,1%) atau Non-Travel (10,5%). Hal ini menunjukkan bahwa sebagian besar pekerjaan tidak membutuhkan perjalanan dinas intensif, kemungkinan besar pekerjaan yang bersifat administratif atau berbasis kantor.
+
+2. Department
+
+Distribusi menunjukkan dominasi departemen Research & Development (65,0%), diikuti oleh Sales (31,0%), dan sisanya Human Resources (4,1%). Artinya, perusahaan ini memiliki fokus besar pada penelitian dan pengembangan produk, sementara bagian penjualan dan HR relatif lebih kecil.
+
+3. EducationField
+
+Sebagian besar karyawan berasal dari bidang Life Sciences (40,7%) dan Medical (31,0%), sedangkan bidang lain seperti Marketing, Technical Degree, dan Human Resources hanya memiliki proporsi kecil. Ini menggambarkan bahwa perusahaan bergerak di bidang industri yang berkaitan dengan sains dan kesehatan.
+
+4. Gender
+
+Komposisi gender relatif seimbang dengan kecenderungan dominan laki-laki (59,9%) dibanding perempuan (40,1%). Perbedaan ini bisa disebabkan oleh jenis pekerjaan yang mungkin lebih banyak membutuhkan tenaga kerja laki-laki, terutama pada posisi teknis atau lapangan.
+
+5. JobRole
+
+Peran pekerjaan paling banyak adalah Sales Executive (22,7%) dan Research Scientist (18,7%), diikuti Laboratory Technician (18,3%). Jabatan manajerial seperti Manager, Director, dan Healthcare Representative memiliki proporsi kecil di bawah 10%. Hal ini menunjukkan bahwa mayoritas tenaga kerja berada pada level pelaksana atau teknis, bukan manajemen puncak.
+
+6. MaritalStatus
+
+Karyawan yang menikah (45,3%) mendominasi, diikuti oleh single (31,7%) dan divorced (22,4%). Distribusi ini dapat mencerminkan bahwa sebagian besar tenaga kerja berada pada rentang usia produktif dengan stabilitas keluarga yang relatif tinggi.
+
+7. OverTime
+
+Sebagian besar karyawan tidak lembur (71,1%), sementara 28,9% sisanya sering bekerja lembur. Hal ini menunjukkan bahwa beban kerja tambahan tidak merata di seluruh karyawan, kemungkinan besar hanya terjadi pada divisi tertentu dengan target waktu yang ketat seperti produksi atau pengembangan.
+
+
 
 ### Multivariate Analysis
 <a id="multivariate-analysis"></a>
-Isi multivariate analysis di sini...
+Grafik 1 :
+<img width="1547" height="1389" alt="image" src="https://github.com/user-attachments/assets/eb0bf3f3-46ad-4b2b-a776-be0d518cdd52" />
+Korelasi Positif yang Tinggi
+
+MonthlyIncome – JobLevel (r = 0.95):
+Terdapat korelasi sangat kuat dan positif antara level jabatan dan pendapatan bulanan. Hal ini menunjukkan bahwa semakin tinggi jabatan seseorang, semakin besar pula pendapatan yang diterima. Korelasi ini wajar karena sistem penggajian biasanya mengikuti tingkat tanggung jawab jabatan.
+
+TotalWorkingYears – MonthlyIncome (r = 0.79):
+Hubungan positif yang kuat antara total masa kerja dan pendapatan menunjukkan bahwa karyawan dengan pengalaman kerja lebih lama cenderung memiliki gaji lebih tinggi. Ini menggambarkan adanya kompensasi yang meningkat seiring bertambahnya pengalaman.
+
+TotalWorkingYears – JobLevel (r = 0.77):
+Korelasi ini mengindikasikan bahwa semakin lama seseorang bekerja, semakin besar peluangnya untuk mencapai posisi jabatan yang lebih tinggi. Hubungan ini sejalan dengan sistem promosi berdasarkan senioritas dan pengalaman kerja.
+
+YearsWithCurrManager – YearsAtCompany (r = 0.78):
+Korelasi yang tinggi antara lama bekerja dengan manajer saat ini dan lama bekerja di perusahaan menunjukkan stabilitas struktur manajemen. Artinya, karyawan yang sudah lama di perusahaan umumnya bekerja lama pula dengan manajer yang sama.
+
+YearsWithCurrManager – YearsInCurrentRole (r = 0.71):
+Hubungan positif yang kuat ini menunjukkan bahwa karyawan yang lama menjabat di posisi tertentu juga cenderung memiliki hubungan kerja jangka panjang dengan atasan langsungnya.
+
+YearsAtCompany – TotalWorkingYears (r = 0.69):
+Korelasi ini menunjukkan bahwa masa kerja di perusahaan saat ini menyumbang sebagian besar terhadap total pengalaman kerja karyawan. Dengan kata lain, banyak karyawan yang menghabiskan sebagian besar kariernya di perusahaan yang sama.
+
+PerformanceRating – PercentSalaryHike (r = 0.77):
+Korelasi positif yang kuat antara penilaian kinerja dan kenaikan gaji menandakan sistem penghargaan yang baik. Karyawan dengan performa tinggi mendapatkan peningkatan gaji yang lebih besar, menunjukkan adanya konsistensi dalam sistem kompensasi berbasis kinerja.
+
+Korelasi Negatif Sedang
+
+Age – Attrition (r = -0.16):
+Korelasi negatif sedang ini menunjukkan bahwa semakin bertambah usia karyawan, semakin kecil kemungkinan mereka keluar dari perusahaan. Sebaliknya, karyawan yang lebih muda cenderung lebih sering berpindah pekerjaan.
+
 
 ### Kesimpulan EDA
 <a id="kesimpulan-eda"></a>
