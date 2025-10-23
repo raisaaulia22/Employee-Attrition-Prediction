@@ -117,6 +117,7 @@ Data yang digunakan pada Tugas 1 SML A 2025 merupakan dataset didapat dari kaggl
 Dataset ini merupakan kumpulan data sumber daya manusia yang komprehensif untuk analisis attrition karyawan. Data tersebut mencakup berbagai aspek karakteristik personal, kondisi pekerjaan, serta faktor-faktor organisasional yang berpotensi memengaruhi keputusan karyawan untuk bertahan atau keluar dari perusahaan. Variabel-variabel dalam dataset merepresentasikan dimensi demografis, kompensasi finansial, perkembangan karir, kepuasan kerja, work-life balance, serta hubungan dengan manajemen. Keberagaman atribut ini memungkinkan dilakukannya analisis mendalam terhadap faktor-faktor prediktif yang berkontribusi terhadap fenomena attrition dalam lingkungan organisasi.
 
 ## Deskripsi Variabel Dataset
+<a id="Deskripsi Variabel Dataset"></a>
 
 | Nama Fitur | Deskripsi | Tipe Data |
 |------------|-----------|-----------|
@@ -159,7 +160,7 @@ Dataset ini merupakan kumpulan data sumber daya manusia yang komprehensif untuk 
 
 
 ### Penjelasan Kontekstual Fitur
-
+<a id="Penjelasan Kontekstual Fitur"></a>
 **A. Kelompok Karir dan Kompensasi:**
 - *JobLevel*, *MonthlyIncome*, *StockOptionLevel* - merepresentasikan hierarki jabatan dan struktur kompensasi
 - *Department*, *JobRole* - menggambarkan divisi organisasi dan spesialisasi peran
@@ -190,10 +191,164 @@ Setiap kelompok fitur saling berinteraksi dalam mempengaruhi keputusan karyawan 
 
 ## Exploratory Data Analysis (EDA)
 <a id="exploratory-data-analysis-eda"></a>
+| Fitur | Count | Mean | Std | Min | 25% | 50% | 75% | Max |
+|-------|-------|------|-----|-----|-----|-----|-----|-----|
+| Age | 1,176.00 | 36.9983 | 9.1781 | 18.0000 | 30.0000 | 36.0000 | 43.0000 | 60.0000 |
+| DailyRate | 1,176.00 | 803.9915 | 401.3394 | 103.0000 | 467.7500 | 799.5000 | 1,157.00 | 1,499.00 |
+| DistanceFromHome | 1,176.00 | 9.3580 | 8.1798 | 1.0000 | 2.0000 | 7.0000 | 14.0000 | 29.0000 |
+| Education | 1,176.00 | 2.9065 | 1.0280 | 1.0000 | 2.0000 | 3.0000 | 4.0000 | 5.0000 |
+| EmployeeCount | 1,176.00 | 1.0000 | 0.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
+| EmployeeNumber | 1,176.00 | 1,015.83 | 599.6574 | 1.0000 | 487.7500 | 1,004.50 | 1,547.25 | 2,062.00 |
+| EnvironmentSatisfaction | 1,176.00 | 2.7168 | 1.0887 | 1.0000 | 2.0000 | 3.0000 | 4.0000 | 4.0000 |
+| HourlyRate | 1,176.00 | 65.5000 | 20.3733 | 30.0000 | 48.0000 | 66.0000 | 83.0000 | 100.0000 |
+| JobInvolvement | 1,176.00 | 2.7372 | 0.7037 | 1.0000 | 2.0000 | 3.0000 | 3.0000 | 4.0000 |
+| JobLevel | 1,176.00 | 2.0765 | 1.0920 | 1.0000 | 1.0000 | 2.0000 | 3.0000 | 5.0000 |
+| JobSatisfaction | 1,176.00 | 2.7194 | 1.1106 | 1.0000 | 2.0000 | 3.0000 | 4.0000 | 4.0000 |
+| MonthlyIncome | 1,176.00 | 6,544.02 | 4,653.74 | 1,009.00 | 2,948.00 | 5,004.50 | 8,420.50 | 19,973.00 |
+| MonthlyRate | 1,176.00 | 14,390.24 | 7,192.83 | 2,094.00 | 8,051.00 | 14,373.00 | 20,770.75 | 26,999.00 |
+| NumCompaniesWorked | 1,176.00 | 2.6930 | 2.4861 | 0.0000 | 1.0000 | 2.0000 | 4.0000 | 9.0000 |
+| PercentSalaryHike | 1,176.00 | 15.2398 | 3.6791 | 11.0000 | 12.0000 | 14.0000 | 18.0000 | 25.0000 |
+| PerformanceRating | 1,176.00 | 3.1573 | 0.3643 | 3.0000 | 3.0000 | 3.0000 | 3.0000 | 4.0000 |
+| RelationshipSatisfaction | 1,176.00 | 2.7389 | 1.0872 | 1.0000 | 2.0000 | 3.0000 | 4.0000 | 4.0000 |
+| StandardHours | 1,176.00 | 80.0000 | 0.0000 | 80.0000 | 80.0000 | 80.0000 | 80.0000 | 80.0000 |
+| StockOptionLevel | 1,176.00 | 0.7908 | 0.8458 | 0.0000 | 0.0000 | 1.0000 | 1.0000 | 3.0000 |
+| TotalWorkingYears | 1,176.00 | 11.3648 | 7.8014 | 0.0000 | 6.0000 | 10.0000 | 15.0000 | 40.0000 |
+| TrainingTimesLastYear | 1,176.00 | 2.7602 | 1.2563 | 0.0000 | 2.0000 | 3.0000 | 3.0000 | 6.0000 |
+| WorkLifeBalance | 1,176.00 | 2.7577 | 0.7181 | 1.0000 | 2.0000 | 3.0000 | 3.0000 | 4.0000 |
+| YearsAtCompany | 1,176.00 | 7.0502 | 6.0866 | 0.0000 | 3.0000 | 5.0000 | 10.0000 | 37.0000 |
+| YearsInCurrentRole | 1,176.00 | 4.2313 | 3.5695 | 0.0000 | 2.0000 | 3.0000 | 7.0000 | 17.0000 |
+| YearsSinceLastPromotion | 1,176.00 | 2.1828 | 3.2153 | 0.0000 | 0.0000 | 1.0000 | 3.0000 | 15.0000 |
+| YearsWithCurrManager | 1,176.00 | 4.1964 | 3.5648 | 0.0000 | 2.0000 | 3.0000 | 7.0000 | 17.0000 |
+| Attrition | 1,176.00 | 0.1616 | 0.3682 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 1.0000 |
+Berdasarkan hasil statistik deskriptif yang diperoleh, dataset ini merepresentasikan profil 1.176 karyawan dengan karakteristik yang beragam. Rata-rata usia karyawan adalah 37 tahun dengan masa kerja di perusahaan sekitar 7 tahun. Sebagian besar karyawan memiliki pengalaman kerja total 11 tahun dan telah menempati posisi saat ini selama 4 tahun. Dari aspek kompensasi, gaji bulanan rata-rata sebesar $6,544 dengan variasi yang cukup signifikan antar level jabatan.
+
+Tingkat kepuasan karyawan secara umum berada pada level sedang hingga baik, dengan nilai rata-rata sekitar 2.7 dari skala 4 untuk berbagai aspek kepuasan kerja. Meskipun sebagian besar karyaman menunjukkan keterlibatan kerja yang baik, terdapat sekitar 16% karyawan yang mengalami attrition atau keluar dari perusahaan. Pola kerja menunjukkan bahwa karyawan rata-rata mengikuti 2-3 kali pelatihan dalam setahun terakhir dan memiliki kenaikan gaji tahunan sebesar 15%. Temuan ini mengindikasikan adanya variasi dalam pengalaman dan persepsi karyawan yang dapat dijadikan dasar untuk menganalisis faktor-faktor yang mempengaruhi turnover dalam perusahaan.
+
+Rata-rata Fitur Kategori Churn 
+## Rata-rata Fitur per Kategori Attrition
+
+|                          | 0         | 1         |
+|:-------------------------|:----------|:----------|
+| Age                      | 37.74     | 33.13     |
+| DailyRate                | 816.56    | 738.74    |
+| DistanceFromHome         | 9.05      | 10.97     |
+| Education                | 2.92      | 2.84      |
+| EmployeeCount            | 1.00      | 1.00      |
+| EmployeeNumber           | 1,009.80  | 1,047.15  |
+| EnvironmentSatisfaction  | 2.77      | 2.44      |
+| HourlyRate               | 65.67     | 64.60     |
+| JobInvolvement           | 2.78      | 2.54      |
+| JobLevel                 | 2.16      | 1.66      |
+| JobSatisfaction          | 2.77      | 2.46      |
+| MonthlyIncome            | 6,871.64  | 4,843.88  |
+| MonthlyRate              | 14,321.48 | 14,747.08 |
+| NumCompaniesWorked       | 2.64      | 2.97      |
+| PercentSalaryHike        | 15.25     | 15.16     |
+| PerformanceRating        | 3.16      | 3.16      |
+| RelationshipSatisfaction | 2.76      | 2.63      |
+| StandardHours            | 80.00     | 80.00     |
+| StockOptionLevel         | 0.84      | 0.52      |
+| TotalWorkingYears        | 12.00     | 8.06      |
+| TrainingTimesLastYear    | 2.78      | 2.65      |
+| WorkLifeBalance          | 2.78      | 2.63      |
+| YearsAtCompany           | 7.46      | 4.90      |
+| YearsInCurrentRole       | 4.49      | 2.87      |
+| YearsSinceLastPromotion  | 2.24      | 1.87      |
+| YearsWithCurrManager     | 4.46      | 2.83      |
+| Attrition                | 0.00      | 1.00      |
+Berdasarkan hasil analisis rata-rata fitur per kategori attrition, terlihat pola yang jelas antara karyawan yang bertahan (0) dan yang keluar (1). Karyawan yang mengalami attrition cenderung lebih muda dengan rata-rata usia 33 tahun dibandingkan yang bertahan (38 tahun). Mereka juga memiliki tingkat kepuasan kerja yang lebih rendah across semua aspek - lingkungan kerja, pekerjaan, dan hubungan kerja. Dari sisi karir, karyawan yang keluar memiliki level jabatan yang lebih rendah, penghasilan bulanan yang lebih kecil ($4,844 vs $6,872), dan masa kerja yang lebih singkat di perusahaan (4.9 tahun vs 7.5 tahun).
+
+Pola menarik terlihat dalam mobilitas kerja dimana karyawan yang attrition justru memiliki jarak tempuh ke kantor yang lebih jauh (11 km vs 9 km) dan pernah bekerja di lebih banyak perusahaan sebelumnya (2.97 vs 2.64). Meskipun mendapat kenaikan gaji yang hampir sama, mereka memiliki tingkat kepemilikan saham perusahaan yang lebih rendah dan lebih jarang mengikuti pelatihan. Temuan ini mengindikasikan bahwa karyawan yang keluar cenderung berada pada fase karir awal, kurang terikat secara finansial dengan perusahaan, dan mengalami tingkat engagement yang lebih rendah dalam berbagai aspek pekerjaan.
 
 ### Missing Value & Outliers
 <a id="missing-value--outliers"></a>
-Isi analisis missing value & outliers di sini...
+Dalam tahap awal pembersihan data, dilakukan pengecekan terhadap duplikasi data dan missing value. Hasilnya menunjukkan bahwa tidak terdapat duplikasi data maupun missing value di seluruh kolom fitur maupun target. Hal ini mengindikasikan bahwa dataset sudah lengkap dan tidak memerlukan teknik imputasi lebih lanjut.
+## Analisis Missing Value
+
+| Fitur | Missing Value | Persentase Missing (%) |
+|-------|---------------|------------------------|
+| id | 0 | 0.0% |
+| Age | 0 | 0.0% |
+| NumCompaniesWorked | 0 | 0.0% |
+| Over18 | 0 | 0.0% |
+| OverTime | 0 | 0.0% |
+| PercentSalaryHike | 0 | 0.0% |
+| PerformanceRating | 0 | 0.0% |
+| RelationshipSatisfaction | 0 | 0.0% |
+| StandardHours | 0 | 0.0% |
+| StockOptionLevel | 0 | 0.0% |
+| TotalWorkingYears | 0 | 0.0% |
+| TrainingTimesLastYear | 0 | 0.0% |
+| WorkLifeBalance | 0 | 0.0% |
+| YearsAtCompany | 0 | 0.0% |
+| YearsInCurrentRole | 0 | 0.0% |
+| YearsSinceLastPromotion | 0 | 0.0% |
+| YearsWithCurrManager | 0 | 0.0% |
+| MonthlyRate | 0 | 0.0% |
+| MonthlyIncome | 0 | 0.0% |
+| MaritalStatus | 0 | 0.0% |
+| EmployeeCount | 0 | 0.0% |
+| BusinessTravel | 0 | 0.0% |
+| DailyRate | 0 | 0.0% |
+| Department | 0 | 0.0% |
+| DistanceFromHome | 0 | 0.0% |
+| Education | 0 | 0.0% |
+| EducationField | 0 | 0.0% |
+| EmployeeNumber | 0 | 0.0% |
+| JobSatisfaction | 0 | 0.0% |
+| EnvironmentSatisfaction | 0 | 0.0% |
+| Gender | 0 | 0.0% |
+| HourlyRate | 0 | 0.0% |
+| JobInvolvement | 0 | 0.0% |
+| JobLevel | 0 | 0.0% |
+| JobRole | 0 | 0.0% |
+| Attrition | 0 | 0.0% |
+Selanjutnya, dilakukan deteksi outlier menggunakan metode Interquartile Range (IQR) untuk setiap fitur numerik. 
+## Deteksi Outlier dengan Metode IQR
+
+| Fitur                    |   Jumlah Outlier |   Persentase Outlier (%) |   Lower Bound |   Upper Bound |   Min |   Max |
+|:-------------------------|-----------------:|-------------------------:|--------------:|--------------:|------:|------:|
+| Attrition                |              190 |                    16.16 |          0    |          0    |     0 |     1 |
+| PerformanceRating        |              185 |                    15.73 |          3    |          3    |     3 |     4 |
+| TrainingTimesLastYear    |              174 |                    14.8  |          0.5  |          4.5  |     0 |     6 |
+| MonthlyIncome            |               86 |                     7.31 |      -5260.75 |      16629.2  |  1009 | 19973 |
+| YearsSinceLastPromotion  |               85 |                     7.23 |         -4.5  |          7.5  |     0 |    15 |
+| StockOptionLevel         |               66 |                     5.61 |         -1.5  |          2.5  |     0 |     3 |
+| YearsAtCompany           |               52 |                     4.42 |         -7.5  |         20.5  |     0 |    37 |
+| TotalWorkingYears        |               52 |                     4.42 |         -7.5  |         28.5  |     0 |    40 |
+| NumCompaniesWorked       |               36 |                     3.06 |         -3.5  |          8.5  |     0 |     9 |
+| YearsInCurrentRole       |               16 |                     1.36 |         -5.5  |         14.5  |     0 |    17 |
+| YearsWithCurrManager     |               10 |                     0.85 |         -5.5  |         14.5  |     0 |    17 |
+| JobLevel                 |                0 |                     0    |         -2    |          6    |     1 |     5 |
+| JobSatisfaction          |                0 |                     0    |         -1    |          7    |     1 |     4 |
+| DistanceFromHome         |                0 |                     0    |        -16    |         32    |     1 |    29 |
+| Education                |                0 |                     0    |         -1    |          7    |     1 |     5 |
+| WorkLifeBalance          |                0 |                     0    |          0.5  |          4.5  |     1 |     4 |
+| EmployeeCount            |                0 |                     0    |          1    |          1    |     1 |     1 |
+| EmployeeNumber           |                0 |                     0    |      -1101.5  |       3136.5  |     1 |  2062 |
+| EnvironmentSatisfaction  |                0 |                     0    |         -1    |          7    |     1 |     4 |
+| StandardHours            |                0 |                     0    |         80    |         80    |    80 |    80 |
+| RelationshipSatisfaction |                0 |                     0    |         -1    |          7    |     1 |     4 |
+| HourlyRate               |                0 |                     0    |         -4.5  |        135.5  |    30 |   100 |
+| PercentSalaryHike        |                0 |                     0    |          3    |         27    |    11 |    25 |
+| DailyRate                |                0 |                     0    |       -566.12 |       2190.88 |   103 |  1499 |
+| MonthlyRate              |                0 |                     0    |     -11028.6  |      39850.4  |  2094 | 26999 |
+| JobInvolvement           |                0 |                     0    |          0.5  |          4.5  |     1 |     4 |
+| Age                      |                0 |                     0    |         10.5  |         62.5  |    18 |    60 |
+Berdasarkan hasil analisis outlier dengan metode IQR, teridentifikasi beberapa pola menarik dalam distribusi data. Variabel **Attrition** dan **PerformanceRating** menunjukkan jumlah outlier tertinggi dengan masing-masing 190 (16.16%) dan 185 (15.73%) observasi, yang dapat dijelaskan oleh sifat distribusi data yang tidak normal pada variabel kategori ini. 
+
+Beberapa variabel finansial dan karir juga menunjukkan keberadaan outlier yang signifikan, seperti **MonthlyIncome** dengan 86 outlier (7.31%), **YearsSinceLastPromotion** (85 outlier, 7.23%), dan **StockOptionLevel** (66 outlier, 5.61%). Hal ini mengindikasikan adanya variasi ekstrem dalam kompensasi dan perkembangan karir karyawan, dimana sebagian kecil karyawan memiliki pendapatan yang sangat tinggi atau masa tunggu promosi yang sangat lama dibandingkan dengan mayoritas populasi.
+
+Variabel terkait pengalaman kerja seperti **YearsAtCompany** dan **TotalWorkingYears** masing-masing memiliki 52 outlier (4.42%), mencerminkan adanya karyawan dengan masa kerja yang sangat panjang di perusahaan atau total pengalaman kerja yang jauh melampaui rata-rata. Sementara itu, **NumCompaniesWorked** dengan 36 outlier (3.06%) menunjukkan variasi dalam mobilitas karir antar karyawan.
+
+Menariknya, sebagian besar variabel kepuasan kerja (**JobSatisfaction, EnvironmentSatisfaction, RelationshipSatisfaction**) serta variabel demografis seperti **Age** dan **Education** tidak mengandung outlier sama sekali, mengindikasikan distribusi yang relatif stabil dan terpusat untuk karakteristik-karakteristik tersebut dalam populasi karyawan.
+<img width="1990" height="3065" alt="image" src="https://github.com/user-attachments/assets/989838d7-4f78-4c15-906e-dc4f67a7560d" />
+Visualisasi melalui boxplot memperjelas sebaran data dan keberadaan outlier pada hampir seluruh variabel numerik. Sebagian besar variabel seperti MonthlyIncome, TotalWorkingYears, YearsAtCompany, dan YearsInCurrentRole menunjukkan adanya outlier di bagian atas, menandakan terdapat individu dengan nilai yang jauh lebih tinggi dibandingkan mayoritas karyawan. Hal ini mengindikasikan adanya variasi ekstrem, misalnya perbedaan besar dalam masa kerja atau penghasilan.
+
+Sebaliknya, beberapa variabel seperti Education, JobInvolvement, WorkLifeBalance, dan PerformanceRating memiliki sebaran yang relatif sempit tanpa outlier mencolok, menandakan distribusi data yang cenderung homogen di antara karyawan.
+
+Meskipun ditemukan sejumlah outlier, data tersebut tidak dihapus dari dataset untuk menjaga keutuhan informasi. Nilai-nilai ekstrem ini mungkin mencerminkan kondisi nyata seperti karyawan senior dengan pengalaman panjang atau jabatan tinggi yang wajar memiliki pendapatan besar. Menghapus outlier justru dapat menghilangkan variasi penting yang relevan dengan analisis terkait kinerja atau loyalitas karyawan. Sebagai langkah mitigasi terhadap pengaruh outlier, analisis lanjutan dapat menggunakan metode atau model yang lebih robust terhadap nilai ekstrem.
+
 
 ### Univariate Analysis
 <a id="univariate-analysis"></a>
