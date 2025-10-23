@@ -112,13 +112,46 @@ Dengan implementasi solusi ini, manfaat utama yang diharapkan antara lain:
 
 ### Sumber Data
 <a id="sumber-data"></a>
-Dataset yang digunakan dalam proyek ini diperoleh dari situs [Kaggle](https://www.kaggle.com/competitions/tugas-1-sml-a-2025/data). Dataset ini mencakup informasi tentang 1.173 karyawan, yang mencatat berbagai aspek demografis dan profil karakteristik karyawan.
+Data yang digunakan pada Tugas 1 SML A 2025 merupakan dataset didapat dari kaggle (https://www.kaggle.com/competitions/tugas-1-sml-a-2025). Data berfokus pada analisis attrition karyawan. Dataset ini terbagi menjadi dua bagian utama, yaitu data training yang terdiri dari 1.176 sampel dengan 36 fitur dan data testing yang berisi 294 sampel dengan 35 fitur. Perbedaan jumlah fitur tersebut disebabkan oleh adanya variabel target "Attrition" yang hanya terdapat pada data training. Variabel target ini memiliki format biner (0 dan 1) yang menunjukkan status karyawan tetap atau keluar dari perusahaan.
 
-Dataset ini memiliki 34 fitur, yang mencakup usia, gaji harian, departemen, pendidikan, level jabatan, dan lainnya. Di antara seluruh karyawan, hanya sekitar 16,15% yang termasuk dalam kategori attrition (keluar dari perusahaan). Ketidakseimbangan kelas ini menjadikan proses pelatihan model prediktif sebagai tantangan tersendiri.
+Dataset ini merupakan kumpulan data sumber daya manusia yang komprehensif untuk analisis attrition karyawan. Data tersebut mencakup berbagai aspek karakteristik personal, kondisi pekerjaan, serta faktor-faktor organisasional yang berpotensi memengaruhi keputusan karyawan untuk bertahan atau keluar dari perusahaan. Variabel-variabel dalam dataset merepresentasikan dimensi demografis, kompensasi finansial, perkembangan karir, kepuasan kerja, work-life balance, serta hubungan dengan manajemen. Keberagaman atribut ini memungkinkan dilakukannya analisis mendalam terhadap faktor-faktor prediktif yang berkontribusi terhadap fenomena attrition dalam lingkungan organisasi.
 
 ### Deskripsi Fitur
 <a id="deskripsi-fitur"></a>
-Isi deskripsi fitur di sini...
+Nama Fitur	Deskripsi	Tipe Data
+id	ID unik karyawan untuk identifikasi	int64
+Age	Usia karyawan dalam tahun	int64
+BusinessTravel	Frekuensi perjalanan dinas karyawan	object
+DailyRate	Gaji harian karyawan	int64
+Department	Departemen tempat karyawan bekerja	object
+DistanceFromHome	Jarak tempat tinggal ke kantor (km)	int64
+Education	Tingkat pendidikan terakhir (skala 1-5)	int64
+EducationField	Bidang studi terakhir karyawan	object
+EnvironmentSatisfaction	Tingkat kepuasan terhadap lingkungan kerja (skala 1-4)	int64
+Gender	Jenis kelamin karyawan	object
+HourlyRate	Upah per jam karyawan	int64
+JobInvolvement	Tingkat keterlibatan pekerjaan (skala 1-4)	int64
+JobLevel	Level jabatan karyawan	int64
+JobRole	Posisi/jabatan spesifik karyawan	object
+JobSatisfaction	Tingkat kepuasan pekerjaan (skala 1-4)	int64
+MaritalStatus	Status pernikahan karyawan	object
+MonthlyIncome	Gaji bulanan karyawan	int64
+MonthlyRate	Tarif bulanan karyawan	int64
+NumCompaniesWorked	Jumlah perusahaan tempat pernah bekerja	int64
+OverTime	Status lembur karyawan	object
+PercentSalaryHike	Persentase kenaikan gaji tahunan terakhir	int64
+PerformanceRating	Penilaian kinerja terakhir (skala 1-4)	int64
+RelationshipSatisfaction	Tingkat kepuasan terhadap hubungan kerja (skala 1-4)	int64
+StockOptionLevel	Level kepemilikan saham perusahaan	int64
+TotalWorkingYears	Total tahun pengalaman kerja	int64
+TrainingTimesLastYear	Jumlah pelatihan yang diikuti dalam setahun terakhir	int64
+WorkLifeBalance	Tingkat keseimbangan kerja-hidup (skala 1-4)	int64
+YearsAtCompany	Total tahun bekerja di perusahaan saat ini	int64
+YearsInCurrentRole	Total tahun di posisi saat ini	int64
+YearsSinceLastPromotion	Tahun sejak promosi terakhir	int64
+YearsWithCurrManager	Tahun bekerja dengan manajer saat ini	int64
+Attrition	Status karyawan keluar dari perusahaan (1=Yes/0=No)	int64
+
 
 ### Penjelasan Kontekstual Fitur
 <a id="penjelasan-kontekstual-fitur"></a>
