@@ -523,11 +523,37 @@ Konten save best model...
 
 ### Interpretation
 <a id="interpretation"></a>
-Konten interpretation...
+Sample salah satu karyawan
+
+<img width="1143" height="600" alt="image" src="https://github.com/user-attachments/assets/f1a9e8a5-757e-4dd1-b570-c7288d9e62b7" />
+
+- Karyawan ini diprediksi tidak attrit, dengan probabilitas attrit sangat rendah berdasarkan hasil transformasi log-odds melalui fungsi logistik.
+- Salah satu faktor utama adalah MonthlyIncome yang mencapai 15,972, yang menurunkan log-odds attrit sebesar 0.55. Artinya, semakin tinggi gaji bulanan karyawan, semakin kecil kemungkinan ia untuk keluar dari perusahaan.
+- Sebaliknya, fitur NumCompaniesWorked yang bernilai 6 justru meningkatkan log-odds attrit sebesar 0.58. Ini menunjukkan bahwa karyawan yang pernah bekerja di banyak perusahaan sebelumnya memiliki kecenderungan attrit yang lebih tinggi.
+- Selain itu, fitur StockOptionLevel yang bernilai 3 juga memberikan pengaruh signifikan dalam menurunkan risiko attrit sebesar 0.38, mengindikasikan bahwa kepemilikan saham perusahaan dapat meningkatkan retensi karyawan.
+
+
 
 ### Feature Importance
 <a id="feature-importance"></a>
-Konten feature importance...
+<img width="997" height="568" alt="image" src="https://github.com/user-attachments/assets/f7cd71b7-6877-43f8-83af-1af2d28a70b6" />
+
+- Berdasarkan hasil SHAP analysis, OverTime dan StockOptionLevel merupakan dua fitur yang paling berpengaruh terhadap prediksi attrition model. Nilai SHAP yang tinggi menunjukkan bahwa kedua variabel ini memiliki kontribusi signifikan dalam menentukan apakah seorang karyawan akan keluar dari perusahaan.
+- Fitur-fitur penting lainnya antara lain MonthlyIncome, Age, JobLevel, dan BusinessTravel. Variabel-variabel ini memberikan pengaruh substantial terhadap output model, dimana nilai-nilai tertentu dari fitur tersebut dapat secara signifikan meningkatkan atau menurunkan probabilitas attrition.
+- Hasil ini konsisten dengan logika bisnis dimana faktor-faktor seperti beban kerja (overtime), kompensasi finansial, level jabatan, dan frekuensi perjalanan dinas memang secara intuitif mempengaruhi keputusan karyawan untuk bertahan atau meninggalkan perusahaan.
+
+- Sekarang, melalui beeswarm plot, kita dapat mengamati hubungan antara fitur-fitur dan prediksi model.
+
+<img width="990" height="497" alt="image" src="https://github.com/user-attachments/assets/d7e0a746-e596-4599-a692-5ff919089dee" />
+
+- OverTime merupakan fitur paling penting. Karyawan yang sering lembur (nilai tinggi/merah) memiliki dampak positif terhadap risiko attrition, sementara yang jarang lembur (nilai rendah/biru) justru menurunkan risiko attrition.
+- StockOptionLevel menunjukkan pola yang logis - karyawan dengan level kepemilikan saham rendah cenderung memiliki risiko attrition lebih tinggi, sedangkan yang memiliki level saham tinggi lebih cenderung bertahan di perusahaan.
+- MonthlyIncome memiliki dampak negatif terhadap attrition, dimana gaji tinggi (nilai merah) justru menurunkan risiko karyawan keluar dari perusahaan.
+- Age menunjukkan bahwa karyawan usia muda lebih berisiko attrit dibanding karyawan senior.
+- BusinessTravel yang frequent meningkatkan risiko attrition, menunjukkan bahwa intensitas perjalanan dinas yang tinggi dapat mempengaruhi keputusan karyawan untuk bertahan.
+
+
+
 
 ## Financial Result
 <a id="financial-result"></a>
