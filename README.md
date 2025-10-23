@@ -159,8 +159,34 @@ Dataset ini merupakan kumpulan data sumber daya manusia yang komprehensif untuk 
 
 
 ### Penjelasan Kontekstual Fitur
-<a id="penjelasan-kontekstual-fitur"></a>
-Isi penjelasan kontekstual di sini...
+
+**A. Kelompok Karir dan Kompensasi:**
+- *JobLevel*, *MonthlyIncome*, *StockOptionLevel* - merepresentasikan hierarki jabatan dan struktur kompensasi
+- *Department*, *JobRole* - menggambarkan divisi organisasi dan spesialisasi peran
+- *PercentSalaryHike*, *PerformanceRating* - menunjukkan sistem reward dan pengakuan kinerja
+
+**B. Kelompok Kepuasan dan Engagement:**
+- *JobSatisfaction*, *EnvironmentSatisfaction*, *RelationshipSatisfaction* - mengukur tingkat engagement karyawan dari berbagai aspek
+- *JobInvolvement* - mencerminkan keterlibatan dalam pekerjaan
+
+**C. Kelompok Pengembangan Karir:**
+- *YearsAtCompany*, *YearsInCurrentRole*, *YearsSinceLastPromotion* - menunjukkan mobilitas dan perkembangan karir
+- *TrainingTimesLastYear* - merepresentasikan investasi pengembangan kompetensi
+- *NumCompaniesWorked*, *TotalWorkingYears* - menggambarkan pengalaman kerja eksternal
+
+**D. Kelompok Work-Life Balance:**
+- *WorkLifeBalance*, *OverTime* - mengukur tekanan beban kerja dan keseimbangan hidup
+- *BusinessTravel* - mempengaruhi intensitas mobilitas pekerjaan
+
+**E. Kelompok Demografis dan Personal:**
+- *Age*, *Gender*, *MaritalStatus* - memberikan konteks latar belakang personal
+- *Education*, *EducationField* - merepresentasikan kualifikasi akademik
+- *DistanceFromHome* - mempengaruhi faktor logistik harian
+
+**F. Kelompok Kompensasi Finansial:**
+- *MonthlyRate*, *DailyRate*, *HourlyRate* - berbagai metrik kompensasi finansial
+
+Setiap kelompok fitur saling berinteraksi dalam mempengaruhi keputusan karyawan untuk bertahan atau keluar dari perusahaan (*Attrition*).
 
 ## Exploratory Data Analysis (EDA)
 <a id="exploratory-data-analysis-eda"></a>
