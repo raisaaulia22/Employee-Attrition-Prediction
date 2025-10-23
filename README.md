@@ -116,41 +116,46 @@ Data yang digunakan pada Tugas 1 SML A 2025 merupakan dataset didapat dari kaggl
 
 Dataset ini merupakan kumpulan data sumber daya manusia yang komprehensif untuk analisis attrition karyawan. Data tersebut mencakup berbagai aspek karakteristik personal, kondisi pekerjaan, serta faktor-faktor organisasional yang berpotensi memengaruhi keputusan karyawan untuk bertahan atau keluar dari perusahaan. Variabel-variabel dalam dataset merepresentasikan dimensi demografis, kompensasi finansial, perkembangan karir, kepuasan kerja, work-life balance, serta hubungan dengan manajemen. Keberagaman atribut ini memungkinkan dilakukannya analisis mendalam terhadap faktor-faktor prediktif yang berkontribusi terhadap fenomena attrition dalam lingkungan organisasi.
 
-### Deskripsi Fitur
-<a id="deskripsi-fitur"></a>
-Nama Fitur	Deskripsi	Tipe Data
-id	ID unik karyawan untuk identifikasi	int64
-Age	Usia karyawan dalam tahun	int64
-BusinessTravel	Frekuensi perjalanan dinas karyawan	object
-DailyRate	Gaji harian karyawan	int64
-Department	Departemen tempat karyawan bekerja	object
-DistanceFromHome	Jarak tempat tinggal ke kantor (km)	int64
-Education	Tingkat pendidikan terakhir (skala 1-5)	int64
-EducationField	Bidang studi terakhir karyawan	object
-EnvironmentSatisfaction	Tingkat kepuasan terhadap lingkungan kerja (skala 1-4)	int64
-Gender	Jenis kelamin karyawan	object
-HourlyRate	Upah per jam karyawan	int64
-JobInvolvement	Tingkat keterlibatan pekerjaan (skala 1-4)	int64
-JobLevel	Level jabatan karyawan	int64
-JobRole	Posisi/jabatan spesifik karyawan	object
-JobSatisfaction	Tingkat kepuasan pekerjaan (skala 1-4)	int64
-MaritalStatus	Status pernikahan karyawan	object
-MonthlyIncome	Gaji bulanan karyawan	int64
-MonthlyRate	Tarif bulanan karyawan	int64
-NumCompaniesWorked	Jumlah perusahaan tempat pernah bekerja	int64
-OverTime	Status lembur karyawan	object
-PercentSalaryHike	Persentase kenaikan gaji tahunan terakhir	int64
-PerformanceRating	Penilaian kinerja terakhir (skala 1-4)	int64
-RelationshipSatisfaction	Tingkat kepuasan terhadap hubungan kerja (skala 1-4)	int64
-StockOptionLevel	Level kepemilikan saham perusahaan	int64
-TotalWorkingYears	Total tahun pengalaman kerja	int64
-TrainingTimesLastYear	Jumlah pelatihan yang diikuti dalam setahun terakhir	int64
-WorkLifeBalance	Tingkat keseimbangan kerja-hidup (skala 1-4)	int64
-YearsAtCompany	Total tahun bekerja di perusahaan saat ini	int64
-YearsInCurrentRole	Total tahun di posisi saat ini	int64
-YearsSinceLastPromotion	Tahun sejak promosi terakhir	int64
-YearsWithCurrManager	Tahun bekerja dengan manajer saat ini	int64
-Attrition	Status karyawan keluar dari perusahaan (1=Yes/0=No)	int64
+## Deskripsi Variabel Dataset
+
+| Nama Fitur | Deskripsi | Tipe Data |
+|------------|-----------|-----------|
+| id | ID unik karyawan untuk identifikasi | int64 |
+| Age | Usia karyawan dalam tahun | int64 |
+| BusinessTravel | Frekuensi perjalanan dinas karyawan | object |
+| DailyRate | Gaji harian karyawan | int64 |
+| Department | Departemen tempat karyawan bekerja | object |
+| DistanceFromHome | Jarak tempat tinggal ke kantor (km) | int64 |
+| Education | Tingkat pendidikan terakhir (skala 1-5) | int64 |
+| EducationField | Bidang studi terakhir karyawan | object |
+| EmployeeCount | Jumlah karyawan (selalu 1 dalam dataset) | int64 |
+| EmployeeNumber | Nomor unik karyawan dalam sistem HR | int64 |
+| EnvironmentSatisfaction | Tingkat kepuasan terhadap lingkungan kerja (skala 1-4) | int64 |
+| Gender | Jenis kelamin karyawan | object |
+| HourlyRate | Upah per jam karyawan | int64 |
+| JobInvolvement | Tingkat keterlibatan pekerjaan (skala 1-4) | int64 |
+| JobLevel | Level jabatan karyawan | int64 |
+| JobRole | Posisi/jabatan spesifik karyawan | object |
+| JobSatisfaction | Tingkat kepuasan pekerjaan (skala 1-4) | int64 |
+| MaritalStatus | Status pernikahan karyawan | object |
+| MonthlyIncome | Gaji bulanan karyawan | int64 |
+| MonthlyRate | Tarif bulanan karyawan | int64 |
+| NumCompaniesWorked | Jumlah perusahaan tempat pernah bekerja | int64 |
+| Over18 | Status usia di atas 18 tahun (selalu Y dalam dataset) | object |
+| OverTime | Status lembur karyawan | object |
+| PercentSalaryHike | Persentase kenaikan gaji tahunan terakhir | int64 |
+| PerformanceRating | Penilaian kinerja terakhir (skala 1-4) | int64 |
+| RelationshipSatisfaction | Tingkat kepuasan terhadap hubungan kerja (skala 1-4) | int64 |
+| StandardHours | Jam kerja standar (selalu 80 dalam dataset) | int64 |
+| StockOptionLevel | Level kepemilikan saham perusahaan | int64 |
+| TotalWorkingYears | Total tahun pengalaman kerja | int64 |
+| TrainingTimesLastYear | Jumlah pelatihan yang diikuti dalam setahun terakhir | int64 |
+| WorkLifeBalance | Tingkat keseimbangan kerja-hidup (skala 1-4) | int64 |
+| YearsAtCompany | Total tahun bekerja di perusahaan saat ini | int64 |
+| YearsInCurrentRole | Total tahun di posisi saat ini | int64 |
+| YearsSinceLastPromotion | Tahun sejak promosi terakhir | int64 |
+| YearsWithCurrManager | Tahun bekerja dengan manajer saat ini | int64 |
+| Attrition | Status karyawan keluar dari perusahaan (1=Yes/0=No) | int64 |
 
 
 ### Penjelasan Kontekstual Fitur
