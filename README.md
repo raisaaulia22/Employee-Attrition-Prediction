@@ -462,8 +462,8 @@ Isi kesimpulan EDA di sini...
 Fitur target **Attrition** sudah berupa label (0 dan 1), sehingga tidak perlu dilakukan encoding. Adapun mapping digunakan sebagai berikut : 
 | Kategori Attrition | Label |
 |--------------------|--------|
-| Yes | 1|
 | No | 0 |
+| Yes | 1 |
 
 ### Splitting Dataset
 <a id="splitting-dataset"></a>
