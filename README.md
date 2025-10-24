@@ -52,9 +52,9 @@ Project SML
 
 ## Domain Projek: Sumber Daya Manusia
 <a id="domain-projek"></a>
-Attrition karyawan merujuk pada keluarnya karyawan dari suatu organisasi akibat pengunduran diri, pensiun, atau pemecatan. Meskipun sebagian pengurangan karyawan tidak dapat dihindari, tingkat pergantian karyawan yang berlebihan dapat mengganggu operasional bisnis secara signifikan, menghambat pertumbuhan, dan berdampak pada kesuksesan jangka panjang. Pengurangan karyawan telah menjadi salah satu masalah paling mendesak bagi organisasi modern, terutama di industri yang kompetitif di mana mempertahankan talenta terbaik sangat penting untuk mempertahankan keunggulan kompetitif. [1](https://www.questjournals.org/jrhss/papers/vol13-issue3/1303122126.pdf)
+Attrition karyawan merujuk pada keluarnya karyawan dari suatu organisasi akibat pengunduran diri, pensiun, atau pemecatan. Meskipun sebagian pengurangan karyawan tidak dapat dihindari, tingkat pergantian karyawan yang berlebihan dapat mengganggu operasional bisnis secara signifikan, menghambat pertumbuhan, dan berdampak pada kesuksesan jangka panjang. Pengurangan karyawan telah menjadi salah satu masalah paling mendesak bagi organisasi modern, terutama di industri yang kompetitif di mana mempertahankan talenta terbaik sangat penting untuk mempertahankan keunggulan kompetitif. [[1]](https://www.questjournals.org/jrhss/papers/vol13-issue3/1303122126.pdf)
 
-Faktor penyebab utama keputusan karyawan untuk mengundurkan diri meliputi ketidakpuasan terhadap kompensasi, tingginya tingkat stres kerja, terbatasnya peluang pengembangan karier, serta manajemen yang kurang efektif. Selain itu, budaya kerja yang tidak mendukung dan kurangnya pengakuan atas kontribusi karyawan turut memperparah tingkat attrition. Oleh karena itu, perusahaan perlu menerapkan strategi retensi holistik yang mencakup peningkatan kesejahteraan karyawan, pengembangan kepemimpinan, serta program pengembangan karier yang terstruktur agar dapat mempertahankan tenaga kerja yang berkualitas dan mendukung keberlanjutan bisnisnya secara efektif. [1](https://www.questjournals.org/jrhss/papers/vol13-issue3/1303122126.pdf)
+Faktor penyebab utama keputusan karyawan untuk mengundurkan diri meliputi ketidakpuasan terhadap kompensasi, tingginya tingkat stres kerja, terbatasnya peluang pengembangan karier, serta manajemen yang kurang efektif. Selain itu, budaya kerja yang tidak mendukung dan kurangnya pengakuan atas kontribusi karyawan turut memperparah tingkat attrition. Oleh karena itu, perusahaan perlu menerapkan strategi retensi holistik yang mencakup peningkatan kesejahteraan karyawan, pengembangan kepemimpinan, serta program pengembangan karier yang terstruktur agar dapat mempertahankan tenaga kerja yang berkualitas dan mendukung keberlanjutan bisnisnya secara efektif. [[1]](https://www.questjournals.org/jrhss/papers/vol13-issue3/1303122126.pdf)
 
 Proyek ini berada dalam domain analisis karakteristik karyawan dan manajemen risiko keuangan, dengan fokus pada pengembangan model prediksi berbasis data untuk mengidentifikasi karyawan yang berpotensi mengundurkan diri dari perusahaan. Dengan memanfaatkan teknik data science dan machine learning, bank dapat memprediksi employee attrition secara lebih akurat dan melakukan intervensi yang bersifat proaktif untuk mempertahankan karyawan dan meminimalisir kerugian finansial yang mungkin timbul.
 
@@ -695,7 +695,7 @@ from sklearn.ensemble import RandomForestClassifier
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train_scaled, y_train)
 ```
-[Random Forest][https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html] adalah metode ensemble yang menggabungkan banyak pohon keputusan untuk meningkatkan akurasi dan stabilitas prediksi. Dengan membangun pohon pada subset data secara acak dan menggabungkan hasilnya, model ini mampu mengurangi overfitting dan bekerja baik pada data dengan banyak fitur.
+[Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) adalah metode ensemble yang menggabungkan banyak pohon keputusan untuk meningkatkan akurasi dan stabilitas prediksi. Dengan membangun pohon pada subset data secara acak dan menggabungkan hasilnya, model ini mampu mengurangi overfitting dan bekerja baik pada data dengan banyak fitur.
 
 **Gradient Boosting (GB)**
 ```python
@@ -704,7 +704,7 @@ from sklearn.ensemble import RandomForestClassifier
 gb_model = RandomForestClassifier()
 gb_model.fit(X_train_scaled, y_train)
 ```
-[Gradient Boosting][https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html] adalah metode ensemble yang membangun pohon keputusan secara berurutan, dimana setiap pohon baru belajar mengoreksi kesalahan pohon sebelumnya. Dengan pendekatan sequential ini, model secara bertahap meningkatkan akurasi dan mampu menangkap pola kompleks dalam data.
+[Gradient Boosting](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) adalah metode ensemble yang membangun pohon keputusan secara berurutan, dimana setiap pohon baru belajar mengoreksi kesalahan pohon sebelumnya. Dengan pendekatan sequential ini, model secara bertahap meningkatkan akurasi dan mampu menangkap pola kompleks dalam data.
 
 Kedua model ini digunakan dengan pengaturan parameter awal sebagai percobaan dasar
 - Pada langkah ini, membandingkan kinerja model yang berbeda dengan menggunakan **stratified k-   fold cross validation** untuk melatih masing-masing model dan mengevaluasi skor ROC-AUC.        Stratified k-fold cross validation akan mempertahankan proporsi target pada setiap fold,        menangani target yang tidak seimbang.
