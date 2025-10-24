@@ -668,6 +668,7 @@ Fitur Kehidupan Kerja :
 Fitur-fitur di atas dapat menangkap hubungan dan pola tersembunyi, serta relevan dalam konteks sumber daya manusia. Hal ini sangat penting untuk diperhatikan saat melakukan feature engineering.
 
 **Penanganan Data Duplikat pada Kolom ```id```**
+
 Terdapat 3 duplikat dalam kolom id di data train, sehingga perlu didrop agar tidak terjadi inkonsistensi target variabel untuk id yang sama.
 
 **Variabel yang Akan Dihapus**
