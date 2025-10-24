@@ -643,22 +643,27 @@ Untuk mendapatkan informasi maksimal dari fitur yang tersedia, dilakukan feature
 Fitur Rasio :
 
 ```1. `Income_Per_Year`   = MonthlyIncome / (TotalWorkingYears +1)
+
    2. `Promotion_Rate`    = YearsAtCompany / YearsSinceLastPromotion
+    
    3. `Salary_Hike_Ratio` =  PercentSalaryHike / MonthlyIncome```
 
 Fitur Progresi Karir :
 
 ```1. `Career_Stagnation` = (YearsInCurrentRole > 3) & (YearsSinceLastPromotion > 2)
+
    2. `Fast_Promotion`    = (YearsSinceLastPromotion < 2) & (JobLevel > 1)```
 
 Fitur Kepuasan :
 
 ```1. `Overall_Satisfaction`         = (EnvironmentSatisfaction + JobSatisfaction + RelationshipSatisfaction) / 3
+
    2. `Low_Satisfaction_High_Income` = (Overall_Satisfaction < 2) & (MonthlyIncome > MonthlyIncome.median())```
 
 Fitur Kehidupan Kerja :
 
 ```1. `Work_Stress`      = (JobInvolvement > 3) & (WorkLifeBalance < 2)
+
    2. `Overtime_Impact`  = OverTime * JobInvolvement```
 
 Fitur-fitur di atas dapat menangkap hubungan dan pola tersembunyi, serta relevan dalam konteks sumber daya manusia. Hal ini sangat penting untuk diperhatikan saat melakukan feature engineering.
