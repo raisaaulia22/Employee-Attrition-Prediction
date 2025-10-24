@@ -459,8 +459,10 @@ Isi kesimpulan EDA di sini...
 
 ### Label Encoding dengan Mapping pada Fitur Target
 <a id="label-encoding-dengan-mapping-pada-fitur-target"></a>
-Konten label encoding...
-
+Fitur target **Attrition** sudah berupa label (0 dan 1), sehingga tidak perlu dilakukan encoding. Adapun mapping digunakan sebagai berikut : 
+| Kategori Attrition | Label |
+| Yes | 1|
+| No | 0 |
 ### Splitting Dataset
 <a id="splitting-dataset"></a>
 Konten splitting dataset...
