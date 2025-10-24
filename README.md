@@ -714,7 +714,7 @@ Kedua model ini digunakan dengan pengaturan parameter awal sebagai percobaan das
 **Tabel Perbandingan Performa Model**
 | Metrik | Random Forest | Gradient Boosting |
 |--------|---------------|-------------------|
-| ROC AUV (Val) | 0.7559 | 0.7671 |
+| ROC AUC (Val) | 0.7559 | 0.7671 |
 | Akurasi (Val) | 0.8383 | 0.8686 |
 | Recall (Val) | 0.3158 | 0.42105|
 | Spesifitas (Val) | 0.8809 | 0.9545 |
@@ -724,15 +724,18 @@ Kedua model ini digunakan dengan pengaturan parameter awal sebagai percobaan das
 | Spesifitas (Train) | 1.0| 1.0 | 1.0 |
 | Waktu Latih (detik) | 3.0 | 37.1 |
 
-Model **Gradient Boosting** dipilih untuk feature selection, hyperparameter tuning
+Model **Gradient Boosting** dipilih untuk feature selection, hyperparameter tuning dan evaluasi akhir karena menunjukkan performa terbaik dengan rata-rata skor ROC-AUC validasi tertinggi. Meskipun model mengalami indikasi overfitting (skor ROC-AUC sebesar 1 pada data pelatihan), hasil validasi sudah cukup tinggi (0,76), menunjukkan generalisasi yang cukup bagus. Meskipun potensi peningkatan performa lebih lanjut melalui hyperparameter tuning relatif kecil, langkah tersebut tetap akan dilakukan sebagai bagian dari proses penyempurnaan model.
 
 ### 2. Feature Selection
 <a id="feature-selection"></a>
-Konten feature selection...
+Walaupun langkah seleksi fitur sangat penting untuk meningkatkan kemampuan generalisasi model   dan membuatnya lebih sederhana, namun ada kalanya langkah ini malah menurunkan performa model, seperti yang terjadi pada model ini. Hal tersebut kemungkinan terjadi karena beberapa alasan :
+- Tree-Based Model seperti Random Forest dan Gradient Boosting otomatis **melakukan seleksi       fitur internal** dengan tidak menghiraukan fitur yang kurang berpengaruh saat split serta       memprioritaskan fitur penting.
+- **Ada kemungkinan terbuangnya "weak signal" saat melakukan seleksi fitur**. Beberapa fitur      mungkin terlihat tidak penting secara individual, namun mereka memberikaan sinyal yang          bernilai ketika dikombinasikan dengan fitur lainnya.
+- **Kehilangan efek ensemble**. Kelebihan tree-based model berada pada keberagamannya, di mana    semakin banyak fitur akan menghasilkan tree yang beragam juga. Adapun seleksi fitur dapat       mengurangi keberagaman ini.
 
 ### 3. Hyperparameter Tuning
 <a id="hyperparameter-tuning"></a>
-Konten hyperparameter tuning...
+- Dilakukan hyperparameter tuning GridSearchCV
 
 ## Model Testing and Evaluation
 <a id="model-testing-and-evaluation"></a>
