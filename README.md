@@ -448,6 +448,145 @@ Korelasi Negatif Sedang
 Age – Attrition (r = -0.16):
 Korelasi negatif sedang ini menunjukkan bahwa semakin bertambah usia karyawan, semakin kecil kemungkinan mereka keluar dari perusahaan. Sebaliknya, karyawan yang lebih muda cenderung lebih sering berpindah pekerjaan.
 
+Grafik 2 :
+<img width="2167" height="634" alt="image" src="https://github.com/user-attachments/assets/f356f934-0306-4821-99f6-3a33f107d747" />
+1. Job Level vs Monthly Income
+
+Terlihat adanya hubungan positif yang kuat antara Job Level dan Monthly Income.
+
+Semakin tinggi Job Level, semakin besar pula Monthly Income yang diterima karyawan.
+
+Ukuran bubble yang mewakili Total Working Years juga meningkat seiring naiknya Job Level, menunjukkan bahwa masa kerja lebih lama cenderung berbanding lurus dengan posisi dan gaji.
+
+Warna bubble menunjukkan Attrition: karyawan dengan gaji dan level rendah memiliki tingkat Attrition lebih tinggi.
+
+Hal ini menunjukkan bahwa karyawan di posisi bawah lebih rentan keluar dari perusahaan dibandingkan mereka yang berposisi tinggi.
+
+2. Years at Company vs Job Level
+
+Terlihat pola bahwa semakin lama seseorang bekerja di perusahaan, semakin tinggi pula jabatan yang diperoleh.
+
+Bubble besar (yang menunjukkan Monthly Income tinggi) terkonsentrasi pada Job Level tinggi.
+
+Warna bubble yang lebih terang menandakan Total Working Years yang juga panjang, sehingga masa kerja panjang → jabatan tinggi → gaji besar.
+
+Pola ini menegaskan bahwa sistem promosi di perusahaan berjalan konsisten berdasarkan pengalaman dan loyalitas kerja.
+
+Karyawan yang telah lama bekerja cenderung menikmati peningkatan pendapatan yang signifikan.
+
+3. Performance Rating vs Percent Salary Hike
+
+Terlihat hubungan positif antara Performance Rating dan Percent Salary Hike.
+
+Karyawan dengan Performance Rating tinggi (rating 4) cenderung memperoleh kenaikan gaji yang lebih besar.
+
+Bubble besar (gaji tinggi) dan warna cerah (jabatan tinggi) didominasi oleh karyawan berperforma baik.
+
+Hal ini menunjukkan bahwa perusahaan menerapkan sistem penghargaan berbasis kinerja, di mana performa tinggi menghasilkan imbalan finansial yang lebih besar.
+
+Dengan demikian, motivasi dan produktivitas karyawan dapat terjaga melalui insentif yang adil.
+
+Grafik 3 :
+Distribusi Fitur Kategorik dengan Attrition 
+<img width="2014" height="3065" alt="image" src="https://github.com/user-attachments/assets/c7829671-ce50-4124-b24f-484fb315218a" />
+1. Variabel Demografis dan Karakteristik Umum
+
+Age: Karyawan yang keluar (Churn) cenderung berusia lebih muda (rata-rata 33 tahun) dibandingkan yang bertahan (rata-rata 37 tahun). Ini menunjukkan bahwa usia muda lebih rentan mengalami turnover, kemungkinan karena mereka masih mencari pengalaman atau peluang yang lebih baik.
+
+DistanceFromHome: Nilai rata-rata jarak rumah lebih tinggi untuk karyawan yang Churn (10,97) dibanding Non-Churn (9,09). Hal ini menunjukkan bahwa jarak tempat tinggal yang jauh dapat meningkatkan risiko keluar dari perusahaan.
+
+Education: Tidak terdapat perbedaan mencolok antara Churn dan Non-Churn, dengan rata-rata sekitar 3. Artinya, tingkat pendidikan tidak berpengaruh signifikan terhadap keputusan keluar.
+
+2. Variabel Kepuasan dan Lingkungan Kerja
+
+EnvironmentSatisfaction, JobSatisfaction, dan WorkLifeBalance: Ketiga variabel ini menunjukkan rata-rata lebih rendah pada karyawan yang Churn. Artinya, ketidakpuasan terhadap lingkungan kerja, pekerjaan, dan keseimbangan hidup–kerja berperan besar dalam keputusan resign.
+
+RelationshipSatisfaction: Nilai rata-rata Churn juga sedikit lebih rendah, mengindikasikan bahwa hubungan sosial dan interaksi dengan rekan kerja atau atasan memengaruhi loyalitas.
+
+TrainingTimesLastYear: Karyawan Non-Churn sedikit lebih sering mendapat pelatihan (rata-rata 2,78) dibandingkan Churn (2,56), yang berarti program pengembangan karyawan dapat membantu menekan tingkat turnover.
+
+3. Variabel Karier dan Pengalaman Kerja
+
+JobLevel dan TotalWorkingYears: Karyawan dengan Job Level dan pengalaman kerja lebih rendah memiliki kecenderungan lebih besar untuk keluar. Ini menunjukkan bahwa karyawan baru atau berposisi rendah lebih rentan terhadap turnover, mungkin karena belum merasa stabil secara finansial atau karier.
+
+YearsAtCompany dan YearsInCurrentRole: Karyawan yang bertahan memiliki masa kerja dan masa jabatan lebih lama. Hal ini menunjukkan bahwa semakin lama seseorang bekerja di posisi tertentu, semakin besar kemungkinan mereka untuk tetap loyal.
+
+YearsSinceLastPromotion: Rata-rata Churn memiliki masa yang lebih pendek sejak promosi terakhir, menunjukkan bahwa kurangnya kesempatan promosi dapat mendorong karyawan keluar.
+
+ 4. Variabel Kompensasi dan Kinerja
+
+MonthlyIncome dan HourlyRate: Nilai rata-rata gaji lebih rendah pada kelompok Churn, menunjukkan bahwa kompensasi yang rendah berhubungan erat dengan tingkat keluar yang tinggi.
+
+DailyRate dan MonthlyRate: Pola distribusi juga memperkuat bahwa karyawan dengan penghasilan lebih kecil lebih rentan keluar dari perusahaan.
+
+PercentSalaryHike dan PerformanceRating: Karyawan Non-Churn cenderung memiliki Performance Rating dan Salary Hike yang sedikit lebih tinggi, mengindikasikan bahwa sistem penghargaan dan evaluasi kinerja yang adil dapat menekan turnover.
+Grafik 4 :
+Distribusi fitur Kategorik dengan Attrition
+<img width="1782" height="1534" alt="image" src="https://github.com/user-attachments/assets/6e75f941-b585-4b78-b729-52fda3da9169" />
+1. Business Travel
+
+Karyawan yang sering melakukan perjalanan dinas (Travel Frequently) memiliki tingkat attrition tertinggi, yaitu 25,3%.
+
+Sebaliknya, karyawan yang tidak pernah melakukan perjalanan (Non-Travel) hanya 15% yang keluar.
+
+Hal ini menunjukkan bahwa beban perjalanan kerja yang tinggi berpotensi meningkatkan kelelahan dan stres, sehingga memperbesar kemungkinan resign.
+
+2. Department
+
+Tingkat attrition cukup bervariasi antar departemen:
+
+Sales dan Research & Development (R&D) memiliki tingkat keluar yang sama, yaitu 20,6%.
+
+Human Resources sedikit lebih rendah, yaitu 13,6%.
+
+Hal ini menandakan bahwa departemen dengan beban kerja tinggi atau tekanan target (Sales dan R&D) memiliki tingkat turnover yang lebih besar.
+
+3. Education Field
+
+Bidang pendidikan Human Resources dan Life Sciences menunjukkan tingkat keluar tertinggi (masing-masing 15,7% dan 13,4%).
+
+Sedangkan bidang Marketing, Medical, Technical Degree, dan Other memiliki tingkat keluar yang lebih rendah.
+
+Ini menunjukkan bahwa latar belakang pendidikan tidak terlalu berpengaruh signifikan, namun mungkin terkait dengan jenis pekerjaan dan ekspektasi terhadap karier.
+
+4. Gender
+
+Tingkat keluar antara perempuan (16,2%) dan laki-laki (15,9%) hampir seimbang.
+
+Artinya, gender bukan faktor dominan dalam keputusan karyawan untuk resign, sehingga penyebab attrition lebih terkait pada faktor pekerjaan atau organisasi daripada jenis kelamin.
+
+5. Job Role
+
+Tingkat keluar tertinggi terjadi pada:
+
+Sales Representative (39,7%)
+
+Laboratory Technician (27,0%)
+
+Human Resources (26,7%)
+
+Sebaliknya, posisi seperti Manager, Research Director, dan Healthcare Representative memiliki tingkat keluar rendah.
+
+Ini menunjukkan bahwa posisi dengan tanggung jawab tinggi dan gaji besar cenderung lebih stabil, sementara posisi teknis dan lapangan memiliki turnover lebih tinggi karena tekanan atau kompensasi yang lebih rendah.
+
+6. Marital Status
+
+Karyawan berstatus menikah (Married) memiliki tingkat keluar tertinggi (25,5%), diikuti oleh single (11,9%) dan divorced (12,2%).
+
+Hal ini menunjukkan bahwa karyawan menikah mungkin menghadapi tekanan waktu atau tanggung jawab keluarga, sehingga lebih rentan keluar jika keseimbangan kerja-hidup tidak terpenuhi.
+
+7. OverTime
+
+Perbedaan mencolok terlihat pada variabel ini:
+
+Karyawan yang sering lembur (Yes) memiliki tingkat keluar 28,6%.
+
+Sedangkan yang tidak lembur (No) hanya 11,1%.
+
+Ini menegaskan bahwa lembur berlebihan menjadi salah satu faktor kuat yang memicu burnout dan meningkatkan turnover.
+
+
+
 
 ### Kesimpulan EDA
 <a id="kesimpulan-eda"></a>
