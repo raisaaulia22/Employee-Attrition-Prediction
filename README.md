@@ -656,7 +656,7 @@ Fitur Progresi Karir :
 Fitur Kepuasan :
 ```
 1. `Overall_Satisfaction`         = (EnvironmentSatisfaction + JobSatisfaction + RelationshipSatisfaction) / 3
-   2. `Low_Satisfaction_High_Income` = (Overall_Satisfaction < 2) & (MonthlyIncome > MonthlyIncome.median())
+2. `Low_Satisfaction_High_Income` = (Overall_Satisfaction < 2) & (MonthlyIncome > MonthlyIncome.median())
 ```
 
 Fitur Kehidupan Kerja :
@@ -667,18 +667,67 @@ Fitur Kehidupan Kerja :
 
 Fitur-fitur di atas dapat menangkap hubungan dan pola tersembunyi, serta relevan dalam konteks sumber daya manusia. Hal ini sangat penting untuk diperhatikan saat melakukan feature engineering.
 
+**Penanganan Data Duplikat pada Kolom ```id```**
+Terdapat 3 duplikat dalam kolom id di data train, sehingga perlu didrop agar tidak terjadi inkonsistensi target variabel untuk id yang sama.
+
+**Variabel yang Akan Dihapus**
+  1. ```id``` :
+     Akan dihapus karena memiliki nilai unik untuk setiap record, sehingga tidak berguna untuk       analisis.
+  2. ```EmployeeCount``` :
+     Akan dihapus karena nilainya selalu 1 untuk semua karyawan, sehingga tidak berguna untuk        analisis.
+  3. ```Over18``` :
+     Akan dihapus karena nilainya selalu Y dalam dataset (semua karyawan berusia di atas 18          tahun), sehingga tidak berguna untuk analisis.
+  4. ```StandardHours``` :
+     Akan dihapus karena nilainya selalu 80 dalam dataset (semua karyawan memiliki jam kerja         standard yang sama), sehingga tidak berguna untuk analisis.
+
 ## Model Training, Comparison, Selection and Tuning
 <a id="model-training-comparison-selection-and-tuning"></a>
 
-### Model Selection
+### 1. Model Selection
 <a id="model-selection"></a>
-Konten model selection...
+Pada tahap pengembangan model, digunakan tiga algoritma klasifikasi berbasis tree yang umum dan efektif, Random Forest (RF) dan Gradient Boost(GB). Pemilihan kedua model tersebut didasarkan pada karakteristik masing-masing serta tujuan untuk membandingkan performa secara empiris.
 
-### Feature Selection
+**Random Forest (RF)**
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+rf_model = RandomForestClassifier()
+rf_model.fit(X_train_scaled, y_train)
+```
+[Random Forest][https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html] adalah metode ensemble yang menggabungkan banyak pohon keputusan untuk meningkatkan akurasi dan stabilitas prediksi. Dengan membangun pohon pada subset data secara acak dan menggabungkan hasilnya, model ini mampu mengurangi overfitting dan bekerja baik pada data dengan banyak fitur.
+
+**Gradient Boosting (GB)**
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+gb_model = RandomForestClassifier()
+gb_model.fit(X_train_scaled, y_train)
+```
+[Gradient Boosting][https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html] adalah metode ensemble yang membangun pohon keputusan secara berurutan, dimana setiap pohon baru belajar mengoreksi kesalahan pohon sebelumnya. Dengan pendekatan sequential ini, model secara bertahap meningkatkan akurasi dan mampu menangkap pola kompleks dalam data.
+
+Kedua model ini digunakan dengan pengaturan parameter awal sebagai percobaan dasar
+- Pada langkah ini, membandingkan kinerja model yang berbeda dengan menggunakan **stratified k-   fold cross validation** untuk melatih masing-masing model dan mengevaluasi skor ROC-AUC.        Stratified k-fold cross validation akan mempertahankan proporsi target pada setiap fold,        menangani target yang tidak seimbang.
+- k-fold cross validation adalah teknik yang digunakan dalam machine learning untuk menilai       kinerja model. Teknik ini melibatkan pembagian dataset menjadi K subset, menggunakan K-1        untuk pelatihan dan satu untuk pengujian secara berulang. Hal ini membantu dalam                memperkirakan kemampuan generalisasi model dengan mengurangi risiko overfitting dan             memberikan metrik kinerja yang lebih andal.
+- Tujuan tahap ini adalah untuk memilih model terbaik untuk digunakan dalam feature selection,    hyperparameter tuning, dan evaluasi model akhir. Untuk mendapatkan model terbaik ini, akan      dievaluasi skor validasi rata-rata **ROC-AUC** tertinggi dan melihat trade-off bias-varians.
+
+**Tabel Perbandingan Performa Model**
+| Metrik | Random Forest | Gradient Boosting |
+|--------|---------------|-------------------|
+| ROC AUV (Val) || 0.7671 |
+| Akurasi (Val) || 0.8686 |
+| Recall (Val) || 0.42105|
+| Spesifitas (Val) |||
+| ROC AUV (Train) | 1.0 | 1.0 | 1.0 |
+| Akurasi (Train) | 1.0 | 1.0 | 1.0 |
+| Recall (Train) | 1.0 | 1.0 | 1.0 |
+| Spesifitas (Train) | 1.0| 1.0 | 1.0 |
+| Waktu Latih (detik) | 3.0 | 37.1 |
+
+### 2. Feature Selection
 <a id="feature-selection"></a>
 Konten feature selection...
 
-### Hyperparameter Tuning
+### 3. Hyperparameter Tuning
 <a id="hyperparameter-tuning"></a>
 Konten hyperparameter tuning...
 
@@ -749,8 +798,6 @@ Sample salah satu karyawan
 - MonthlyIncome memiliki dampak negatif terhadap attrition, dimana gaji tinggi (nilai merah) justru menurunkan risiko karyawan keluar dari perusahaan.
 - Age menunjukkan bahwa karyawan usia muda lebih berisiko attrit dibanding karyawan senior.
 - BusinessTravel yang frequent meningkatkan risiko attrition, menunjukkan bahwa intensitas perjalanan dinas yang tinggi dapat mempengaruhi keputusan karyawan untuk bertahan.
-
-
 
 
 ## Financial Result
