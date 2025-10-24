@@ -735,25 +735,61 @@ Walaupun langkah seleksi fitur sangat penting untuk meningkatkan kemampuan gener
 
 ### 3. Hyperparameter Tuning
 <a id="hyperparameter-tuning"></a>
-- Dilakukan hyperparameter tuning GridSearchCV
+- Dilakukan hyperparameter tuning Gradient Boosting menggunakan Grid Search melalui library       sklearn.model_selection
+- Grid Search melakukan pencarian dalam ruang hyperparameter model yang telah ditentukan          seblumnya. Model ini mengevaluasi setiap kemungkinan kombinasi dari kumpulan parameter yang     diberikan, tanpa mempertimbangkan hasil evaluasi dari kombinasi sebelumnya.
+- Sama seperti dalam proses tuning lainnya, pada setiap kombinasi hyperparameter, model akan      dilatih menggunakan dataset train dan dievaluasi dengan stratified k-fold cross-validation.     Langkah ini sangat penting untuk memberikan estimasi performa model yang robust dan             menghindari overfitting yang dapat terjadi jika kita hanya mengevaluasi pada satu bagian data   train saja.
+- Tuning hyperparameter adalah langkah penyempurnaan yang secara signifikan meningkatkan          performa model.
+
+**Best Parameter** 
+```
+final_best_params = {
+  'cv' : 3,
+  'scoring' : 'roc_auc',
+  'n_jobs' : -1,
+  'verbose' : 1,
+  'learning_rate' : 0.2,
+  'max_depth' : 2,
+  'min_sample_leaf' : 10,
+  'min_sample_split' : 50,
+  'n_estimator' : 100
+}
+
+gb_clf = GradientBoostingClassifier(**final_best_params)
+gb_clf.fit(X_train, y_train)
+```
 
 ## Model Testing and Evaluation
 <a id="model-testing-and-evaluation"></a>
 
-### Data Test Predict
+### 1. Data Test Predict
 <a id="data-test-predict"></a>
-Konten data test predict...
+Dilakukan transform untuk preprocessing dan feature selection pada data test. Kemudian, dilakukan predict dan mendapatkan estimasi probabilitas churn dari model untuk evaluasi.
 
-### Best Model Evaluation
+### 2. Best Model Evaluation
 <a id="best-model-evaluation"></a>
 
 #### Classification Report
 <a id="classification-report"></a>
-Konten classification report...
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0 | 0.90 | 0.95 | 0.92 | 198 |
+| 1 | 0.64 | 0.42 | 0.51 | 38 |
+
+- **Accuracy** : 0.87
+- **Macro Average** :
+  - Precision : 0.77
+  - Recall : 0.69
+  - F1-Score : 0.72
+- **Weighted Average** :
+  - Precision : 0.85
+  - Recall : 0.87
+  - F1-Score : 0.86
 
 #### Metode Evaluasi Lanjutan
 <a id="metode-evaluasi-lanjutan"></a>
-Konten metode evaluasi lanjutan...
+- **Brier Score** : 0.13
+- **Gini Coefficient** : 0.53
+- **Kolmogorov-Smirnov (KS) Statistic** : 0.44
 
 #### Confusion Matrix
 <a id="confusion-matrix"></a>
@@ -769,7 +805,13 @@ Konten plot PR-AUC curve...
 
 ## Save Best Model
 <a id="save-best-model"></a>
-Konten save best model...
+```
+import pickle
+
+file_path = "../model/gb_best_model.pkl"
+with open(file_path, 'wb') as file:
+    pickle.dump(best_gb, file)
+```
 
 ## Model Interpretation
 <a id="model-interpretation"></a>
