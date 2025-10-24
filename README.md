@@ -856,7 +856,7 @@ Konten interpretasi dan validasi model....
 
 ### Estimasi Nilai Finansial
 <a id="estimasi-nilai-finansial"></a>
-Konten estimasi nilai finansial...
+Berdasarkan estimasi awal, proyek ini memiliki potensi memberikan dampak finansial sebesar $862.500. Besarnya nilai manfaat aktual tentu akan sangat tergantung pada struktur biaya yang ditetapkan perusahaan serta sejauh mana strategi retensi berbasis model ini diimplementasikan oleh manajemen. Meskipun demikian, estimasi ini memberikan dasar yang kuat untuk pengambilan keputusan bisnis.
 
 ### Langkah Selanjutnya
 <a id="langkah-selanjutnya"></a>
