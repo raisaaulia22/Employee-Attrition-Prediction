@@ -714,15 +714,17 @@ Kedua model ini digunakan dengan pengaturan parameter awal sebagai percobaan das
 **Tabel Perbandingan Performa Model**
 | Metrik | Random Forest | Gradient Boosting |
 |--------|---------------|-------------------|
-| ROC AUV (Val) || 0.7671 |
-| Akurasi (Val) || 0.8686 |
-| Recall (Val) || 0.42105|
-| Spesifitas (Val) |||
+| ROC AUV (Val) | 0.7559 | 0.7671 |
+| Akurasi (Val) | 0.8383 | 0.8686 |
+| Recall (Val) | 0.3158 | 0.42105|
+| Spesifitas (Val) | 0.8809 | 0.9545 |
 | ROC AUV (Train) | 1.0 | 1.0 | 1.0 |
 | Akurasi (Train) | 1.0 | 1.0 | 1.0 |
 | Recall (Train) | 1.0 | 1.0 | 1.0 |
 | Spesifitas (Train) | 1.0| 1.0 | 1.0 |
 | Waktu Latih (detik) | 3.0 | 37.1 |
+
+Model **Gradient Boosting** dipilih untuk feature selection, hyperparameter tuning
 
 ### 2. Feature Selection
 <a id="feature-selection"></a>
