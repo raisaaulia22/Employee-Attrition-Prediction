@@ -343,7 +343,7 @@ Selanjutnya, dilakukan deteksi outlier menggunakan metode Interquartile Range (I
 | Age                      |                0 |                     0    |         10.5  |         62.5  |    18 |    60 |
 
 
-Berdasarkan hasil analisis outlier dengan metode IQR, teridentifikasi beberapa pola menarik dalam distribusi data. Variabel **Attrition** dan **PerformanceRating** menunjukkan jumlah outlier tertinggi dengan masing-masing 190 (16.16%) dan 185 (15.73%) observasi, yang dapat dijelaskan oleh sifat distribusi data yang tidak normal pada variabel kategori ini. 
+Berdasarkan hasil analisis outlier dengan metode IQR, teridentifikasi beberapa pola menarik dalam distribusi data. Variabel **PerformanceRating** menunjukkan jumlah outlier tertinggi dengan  185 (15.73%) observasi, yang dapat dijelaskan oleh sifat distribusi data yang tidak normal pada variabel kategori ini. 
 
 Beberapa variabel finansial dan karir juga menunjukkan keberadaan outlier yang signifikan, seperti **MonthlyIncome** dengan 86 outlier (7.31%), **YearsSinceLastPromotion** (85 outlier, 7.23%), dan **StockOptionLevel** (66 outlier, 5.61%). Hal ini mengindikasikan adanya variasi ekstrem dalam kompensasi dan perkembangan karir karyawan, dimana sebagian kecil karyawan memiliki pendapatan yang sangat tinggi atau masa tunggu promosi yang sangat lama dibandingkan dengan mayoritas populasi.
 
