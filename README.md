@@ -607,10 +607,57 @@ Fitur target **Attrition** sudah berupa label (0 dan 1), sehingga tidak perlu di
 ### Splitting Dataset
 <a id="splitting-dataset"></a>
 - Menetapkan ```stratify = y``` sehingga fungsi train_test_split memastikan bahwa proses pemisahan mempertahankan persentase yang sama dari setiap kelas target di set train dan test.
+  
+Dataset yang digunakan dalam analisis ini terdiri dari data pelatihan (train) dan data pengujian (test) dengan rincian sebagai berikut:
+- **Ukuran data fitur (train)** : 940 observasi dengan 31 fitur.
+- **Ukuran data target (train)** : 940 observasi
+- **Ukuran data fitur (test)** : 236 observasi dengan 31 fitur.
+- **Ukuran data target (test)** : 236 observasi.
+
+**Proporsi Kelas pada Variabel Target**
+Distribusi proporsi kelas pada variabel target ```Attrition``` untuk masing-masing data adalah sebagai berikut:
+- **Data Pelatihan (Train)** :
+  - Kelas 0 (tidak keluar perusahaan) : 83,83%
+  - Kelas 1 (keluar perusahaan) : 16,17%
+- **Data Pengujian (Test)** :
+  - Kelas 0 (tidak keluar perusahaan) : 83,55%
+  - Kelas 1 (keluar perusahaan) : 16,45%
+
+Distribusi kelas yang relatif seimbang antara data pelatihan dan pengujian menunjukkan bahwa proses pembagian data telah mempertahankan proporsi kelas, sehingga model dapat dilatih dan dievaluasi secara konsisten terhadap fenomena Attrition.
 
 ### Feature Engineering, Data Cleaning and Preprocessing
 <a id="feature-engineering-data-cleaning-and-preprocessing"></a>
-Konten feature engineering...
+Prepocessing untuk Model Berbasis Tree
+- **Fitur Numerik** :
+  Tidak akan dilakukan transformasi apa pun karena model berbasis tree tidak memerlukan feature   scaling.
+- **Fitur Kategorikal** (Ordinal => BusinessTravel)
+  Akan diterapkan ordinal encoding untuk mempertahankan karakteristik ordinal.
+- **Fitur Kategorikal** (Nominal => Department, EducationField, JobRole, MaritalStatus)
+  Akan diterapkan one hot encoding karena jumlah kategori sedikit di tiap fitur.
+- **Fitur Kategorikal** (Binary => Gender, OverTime)
+  Akan diterapkan label encoding karena  fitur ini akan diubah menjadi variabel biner unik,       sehingga tidak meningkatkan dimensi.
+
+**Feature Engineering**
+Untuk mendapatkan informasi maksimal dari fitur yang tersedia, dilakukan feature engineering yang sudah terintegrasi dalam preprocessing dengan membuat fitur-fitur berikut:
+
+Fitur Rasio :
+```1. `Income_Per_Year`   = MonthlyIncome / (TotalWorkingYears +1)
+   2. `Promotion_Rate`    = YearsAtCompany / YearsSinceLastPromotion
+   3. `Salary_Hike_Ratio` =  PercentSalaryHike / MonthlyIncome```
+
+Fitur Progresi Karir :
+```1. `Career_Stagnation` = (YearsInCurrentRole > 3) & (YearsSinceLastPromotion > 2)
+   2. `Fast_Promotion`    = (YearsSinceLastPromotion < 2) & (JobLevel > 1)```
+
+Fitur Kepuasan :
+```1. `Overall_Satisfaction`         = (EnvironmentSatisfaction + JobSatisfaction + RelationshipSatisfaction) / 3
+   2. `Low_Satisfaction_High_Income` = (Overall_Satisfaction < 2) & (MonthlyIncome > MonthlyIncome.median())```
+
+Fitur Kehidupan Kerja :
+```1. `Work_Stress`      = (JobInvolvement > 3) & (WorkLifeBalance < 2)
+   2. `Overtime_Impact`  = OverTime * JobInvolvement```
+
+Fitur-fitur di atas dapat menangkap hubungan dan pola tersembunyi, serta relevan dalam konteks sumber daya manusia. Hal ini sangat penting untuk diperhatikan saat melakukan feature engineering.
 
 ## Model Training, Comparison, Selection and Tuning
 <a id="model-training-comparison-selection-and-tuning"></a>
