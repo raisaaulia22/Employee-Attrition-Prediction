@@ -768,9 +768,13 @@ Konten save best model...
 ## Model Interpretation
 <a id="model-interpretation"></a>
 
-### Interpretation
+### Interpretation with SHAP Values
 <a id="interpretation"></a>
-Sample salah satu karyawan
+- Untuk menginterpretasikan hasil Gradient Boosting, akan dianalisis nilai SHAP.
+- SHAP adalah library yang memungkinkan interpretasi hasil algoritma machine learning. Dengan SHAP, dapat dipahami dampak masing-masing fitur terhadap prediksi model individu, di mana f(x) = E[f(X)] + SHAP.
+- Secara sederhana, nilai SHAP dari sebuah fitur (seberapa besar pengaruhnya terhadap prediksi individu) adalah penjumlahan berbobot kontribusi marjinal dengan mempertimbangkan semua kemungkinan kombinasi fitur (feature coalitions).
+- Feature coalition adalah kelompok fitur, dan nilainya merupakan prediksi model individu yang hanya menggunakan fitur-fitur dalam kelompok tersebut. Kontribusi marjinal dari sebuah fitur adalah perbedaan antara nilai prediksi untuk kombinasi fitur dengan dan tanpa fitur tersebut. Nilai kontribusi marjinal dijumlahkan untuk semua kemungkinan kombinasi dengan dan tanpa fitur tersebut. Bobotnya didasarkan pada probabilitas fitur yang sedang dihitung nilai SHAP-nya untuk berada dalam kombinasi tersebut.
+- Sample salah satu karyawan
 
 <img width="1143" height="600" alt="image" src="https://github.com/user-attachments/assets/f1a9e8a5-757e-4dd1-b570-c7288d9e62b7" />
 
