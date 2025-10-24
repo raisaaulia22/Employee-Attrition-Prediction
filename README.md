@@ -467,7 +467,7 @@ Fitur target **Attrition** sudah berupa label (0 dan 1), sehingga tidak perlu di
 
 ### Splitting Dataset
 <a id="splitting-dataset"></a>
-Konten splitting dataset...
+- Menetapkan ```stratify = y``` sehingga fungsi train_test_split memastikan bahwa proses pemisahan mempertahankan persentase yang sama dari setiap kelas target di set train dan test.
 
 ### Feature Engineering, Data Cleaning and Preprocessing
 <a id="feature-engineering-data-cleaning-and-preprocessing"></a>
