@@ -793,7 +793,7 @@ Dilakukan transform untuk preprocessing dan feature selection pada data test. Ke
 
 #### Confusion Matrix
 <a id="confusion-matrix"></a>
-Konten confusion matrix...
+<img width="1980" height="1535" alt="image" src="image/confusion_matrix.png" />
 
 #### Plot ROC-AUC Curve
 <a id="plot-roc-auc-curve"></a>
