@@ -849,6 +849,28 @@ with open(file_path, 'wb') as file:
 - SHAP adalah library yang memungkinkan interpretasi hasil algoritma machine learning. Dengan SHAP, dapat dipahami dampak masing-masing fitur terhadap prediksi model individu, di mana f(x) = E[f(X)] + SHAP.
 - Secara sederhana, nilai SHAP dari sebuah fitur (seberapa besar pengaruhnya terhadap prediksi individu) adalah penjumlahan berbobot kontribusi marjinal dengan mempertimbangkan semua kemungkinan kombinasi fitur (feature coalitions).
 - Feature coalition adalah kelompok fitur, dan nilainya merupakan prediksi model individu yang hanya menggunakan fitur-fitur dalam kelompok tersebut. Kontribusi marjinal dari sebuah fitur adalah perbedaan antara nilai prediksi untuk kombinasi fitur dengan dan tanpa fitur tersebut. Nilai kontribusi marjinal dijumlahkan untuk semua kemungkinan kombinasi dengan dan tanpa fitur tersebut. Bobotnya didasarkan pada probabilitas fitur yang sedang dihitung nilai SHAP-nya untuk berada dalam kombinasi tersebut.
+
+```python
+import shap
+
+explainer = shap.Explainer(lgb_clf)
+shap_values = explainer(X_test_selected)
+```
+
+- Terdapat 44 variabel dalam model, dan untuk setiap observasi, masing-masing memiliki nilai SHAP yang menggambarkan kontribusinya terhadap prediksi.
+- Dalam kasus klasifikasi biner Employee Attrition, hasil prediksi dinyatakan dalam bentuk log-odds. Pada visualisasi berikut, E[f(X)] merepresentasikan nilai rata-rata prediksi dalam skala log-odds.
+- Log-odds sendiri merupakan logaritma dari odds, yaitu rasio antara probabilitas suatu kejadian terjadi dengan tidak terjadi. Penggunaan logaritma ini menjadikan skala prediksi lebih linear dan stabil.
+- Nilai SHAP positif menunjukkan bahwa suatu fitur meningkatkan nilai log-odds, yang berarti juga meningkatkan kemungkinan karyawan untuk attrit, sedangkan nilai negatif menurunkan probabilitas tersebut.
+- Untuk mengubah log-odds menjadi probabilitas attrit, digunakan fungsi logistik (sigmoid) sebagai berikut:
+
+<center>
+
+$$
+\text{sigmoid}(x) = \frac{1}{1 + e^{-x}}
+$$
+
+</center>
+
 - Sample salah satu karyawan
 
 <img width="1143" height="600" alt="image" src="https://github.com/user-attachments/assets/f1a9e8a5-757e-4dd1-b570-c7288d9e62b7" />
@@ -909,7 +931,7 @@ Namun demikian, untuk tujuan estimasi dan sebagai dasar pengambilan keputusan, k
 
 ### Ringkasan Proyek
 <a id="ringkasan-proyek"></a>
-Konten ringkasan proyek...
+Dalam proyek ini, telah dikembangkan sebuah model klasifikasi berbasis Gradient Boosting untuk memprediksi probabilitas karyawan yang akan melakukan attrition pada sebuah perusahaan. Tujuan utama dari pengembangan model ini adalah untuk menghasilkan prediksi yang akurat terhadap potensi attrition, mengidentifikasi faktor-faktor utama yang memengaruhi keputusan karyawan untuk keluar dari perusahaan, serta menyusun rekomendasi aksi yang dapat diimplementasikan guna meminimalkan tingkat attrition. Dengan demikian, pihak manajemen dapat menyusun strategi retensi yang lebih efektif, mengingat bahwa mempertahankan karyawan yang sudah berpengalaman umumnya lebih ekonomis dibandingkan dengan merekrut dan melatih karyawan baru.
 
 ### Hasil dan Evaluasi Model
 <a id="hasil-dan-evaluasi-model"></a>
