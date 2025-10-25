@@ -935,15 +935,13 @@ Dalam proyek ini, telah dikembangkan sebuah model klasifikasi berbasis Gradient 
 
 ### Hasil dan Evaluasi Model
 <a id="hasil-dan-evaluasi-model"></a>
-Konten hasil dan evaluasi model...
+Permasalahan bisnis yang diangkat telah berhasil diselesaikan dengan baik. Model yang dibangun mampu mengidentifikasi 42% karyawan yang attrit dengan tingkat akurasi AUC sebesar 0.77. Nilai AUC ini menunjukkan bahwa model memiliki kemampuan klasifikasi yang cukup baik, yakni dalam 77% kasus, model memberikan probabilitas attrit yang lebih tinggi kepada karyawan yang benar-benar attrit dibandingkan yang tidak.
 
-### Penanganan Ketidakseimbangan Data
-<a id="penanganan-ketidakseimbangan-data"></a>
-Konten penanganan ketidakseimbangan data...
+Selama tahap Exploratory Data Analysis (EDA), telah berhasil diidentifikasi beberapa faktor utama yang menjadi penyebab attrit, dan temuan ini kemudian digunakan untuk memberikan rekomendasi awal kepada pihak manajemen terkait pola attrition karyawan.
 
 ### Interpretasi dan Validasi Model
 <a id="interpretasi-dan-validasi-model"></a>
-Konten interpretasi dan validasi model....
+Model telah diinterpretasikan dengan menggunakan teknik SHAP (SHapley Additive exPlanations) untuk mengevaluasi kontribusi setiap fitur terhadap prediksi attrit, baik secara global maupun individual. Hasil interpretasi ini selaras dengan temuan selama tahap EDA, yang mengindikasikan bahwa fitur-fitur yang paling berpengaruh memang sudah teridentifikasi sebelumnya sebagai faktor kunci yang mendorong attrition. Selain itu, nilai probabilitas yang dihasilkan oleh model dinilai masuk akal dan konsisten dengan ekspektasi bisnis, memperkuat kepercayaan terhadap keandalan model dalam memberikan prediksi yang actionable bagi tim HR.
 
 ### Estimasi Nilai Finansial
 <a id="estimasi-nilai-finansial"></a>
