@@ -951,4 +951,4 @@ Berdasarkan estimasi awal, proyek ini memiliki potensi memberikan dampak finansi
 
 ### Langkah Selanjutnya
 <a id="langkah-selanjutnya"></a>
-Konten langkah selanjutnya...
+Tahap selanjutnya dari proyek ini adalah implementasi model ke dalam sistem HR perusahaan melalui pendekatan bertahap yang terukur. Langkah ini bertujuan untuk memastikan model dapat dioperasionalkan dengan stabil dan memberikan nilai tambah bagi departemen Human Resources.
