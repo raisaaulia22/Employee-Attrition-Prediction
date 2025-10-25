@@ -803,6 +803,33 @@ Dilakukan transform untuk preprocessing dan feature selection pada data test. Ke
 <a id="plot-pr-auc-curve"></a>
 <img width="1980" height="1535" alt="image" src="image/PR-AUC.png" />
 
+| No | Metrik | Nilai |
+|----|--------|-------|
+| 0 | Accuracy | 0.87 |
+| 1 | Precision | 0.64 |
+| 2 | Recall | 0.42 |
+| 3 | F1-Score | 0.51 |
+| 4 | ROC-AUC | 0.77 |
+| 5 | KS | 0.44 |
+| 6 | Gini | 0.53 |
+| 7 | PR-AUC | 0.57 |
+| 8 | Brier | 0.13 |
+
+Hasil akhir menunjukkan bahwa model sudah memiliki performa yang cukup.
+- **Recall (0,42)** : Model mampu mengidentifikasi 42% karyawan yang keluar dari                  perusahaan. Berdasarkan confusion matrix, sebanyak 16 dari 38 karyawan berhasil diprediksi      dengan benar.
+- **Precision (0,64)** : Dari seluruh karyawan yang diprediksi keluar, 64% di antaranya benar-    benar tidaak keluar. Dalam confusion matrix, dari 25 prediksi akan keluar, 16 adalah karyawan   yang benar-benar keluar.
+- **ROC-AUC (0,77)** : Skor ROC-AUC sebesar 0,77 mengindikasikan kemampuan model yang cukup       dalam membedakan antara karyawan yang keluar dan tidak. Secara praktis, apabila dipilih satu    karyawan yang keluar dan satu yang tidak keluar secara acak, model akan memberikan              probabilitas karyawan keluar yang lebih tinggi kepada pelanggan yang benar-benar keluar dalam   77% kasus.
+
+**Langkah Selanjutnya :**
+
+Melakukan analisis terhadap distribusi probabilitas attrition yang diprediksi oleh model.
+<img width="1980" height="1535" alt="image" src="image/dist_predicted_prob1.png" />
+
+Dapat dilihat bahwa masih ada overlap dalam distribusi probabilitas kedua kelas, artinya model masih mengalami kesulitan membedakan kedua kelas. Adapun banyak karyawan yang tidak keluar terkonsentrasi di ujung kiri (probability < 0.3), menunjukkan model memiliki keyakinan tinggi dalam memprediksi karyawan yang tidak keluar.
+
+<img width="1980" height="1535" alt="image" src="image/att_per_decile.png" />
+Desil 1-6 menyatakan bahwa karyawan yang memiliki probabilitas tinggi untuk keluar hanya sedikit. Sementara desil 7-10 menyatakan bahwa karyawan yang memiliki probabilitas rendah untuk keluar itu banyak (yang loyal banyak). Artinya, model sudah bagus dalam mengidentifikasi karyawan yang pasti tidak keluar, namun masih kurang tajam untuk identifikasi karyawan yang benar-benar keluar.
+
 ## Save Best Model
 <a id="save-best-model"></a>
 ```
