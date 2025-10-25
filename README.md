@@ -797,11 +797,11 @@ Dilakukan transform untuk preprocessing dan feature selection pada data test. Ke
 
 #### Plot ROC-AUC Curve
 <a id="plot-roc-auc-curve"></a>
-Konten plot ROC-AUC curve...
+<img width="1980" height="1535" alt="image" src="image/ROC-AUC.png" />
 
 #### Plot PR-AUC Curve
 <a id="plot-pr-auc-curve"></a>
-Konten plot PR-AUC curve...
+<img width="1980" height="1535" alt="image" src="image/PR-AUC.png" />
 
 ## Save Best Model
 <a id="save-best-model"></a>
