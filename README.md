@@ -86,9 +86,8 @@ Untuk menjawab pernyataan masalah di atas, tujuan proyek ini dirumuskan sebagai 
 Untuk mencapai tujuan-tujuan tersebut, solusi yang akan diimplementasikan meliputi:
 - **Eksperimen Berbagai Algoritma Klasifikasi :**
   Membangun dan membandingkan performa beberapa algoritma seperti :
-  -  A
-  -  B
-  -  C
+  -  Gradient Boosting
+  -  Random Forest
 - **Optimasi Model dengan Hyperparameter Tuning :**
   Menggunakan pendekatan seperti Bayesian Optimization dengan optuna untuk mendapatkan   konfigurasi model terbaik.
 - **Evaluasi Model dengan Metrik yang Relevan :**
