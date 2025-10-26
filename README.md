@@ -18,7 +18,6 @@ Project SML
     - [Missing Value & Outliers](#missing-value--outliers)
     - [Univariate Analysis](#univariate-analysis)
     - [Multivariate Analysis](#multivariate-analysis)
-    - [Kesimpulan EDA](#kesimpulan-eda)
 - [Data Preparation](#data-preparation)
   - [Label Encoding dengan Mapping pada Fitur Target](#label-encoding-dengan-mapping-pada-fitur-target)
   - [Splitting Dataset](#splitting-dataset)
@@ -43,7 +42,6 @@ Project SML
 - [Conclusions](#conclusions)
   - [Ringkasan Proyek](#ringkasan-proyek)
   - [Hasil dan Evaluasi Model](#hasil-dan-evaluasi-model)
-  - [Penanganan Ketidakseimbangan Data](#penanganan-ketidakseimbangan-data)
   - [Interpretasi dan Validasi Model](#interpretasi-dan-validasi-model)
   - [Estimasi Nilai Finansial](#estimasi-nilai-finansial)
   - [Langkah Selanjutnya](#langkah-selanjutnya)
@@ -587,9 +585,6 @@ Ini menegaskan bahwa lembur berlebihan menjadi salah satu faktor kuat yang memic
 
 
 
-### Kesimpulan EDA
-<a id="kesimpulan-eda"></a>
-Isi kesimpulan EDA di sini...
 
 
 ## Data Preparation
